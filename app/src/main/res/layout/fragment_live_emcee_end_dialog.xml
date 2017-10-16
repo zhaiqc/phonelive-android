@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/create_room_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/rl_livestop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.ylive.phonelive.widget.AvatarView
+                app:border_color="@color/global"
+                app:border_width="2dp"
+                android:id="@+id/av_user_head"
+                android:layout_width="90dp"
+                android:layout_height="90dp"/>
+            <TextView
+                android:textSize="@dimen/text_size_20"
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_user_nick"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.ylive.phonelive.widget.BlackTextView
+                android:layout_marginTop="10dp"
+                android:textColor="@color/global"
+                android:textSize="@dimen/text_size_25"
+                android:text="@string/liveend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.ylive.phonelive.widget.BlackTextView
+                    android:textSize="@dimen/text_size_15"
+                    android:layout_marginTop="10dp"
+                    android:text="0"
+                    android:id="@+id/tv_live_end_num"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/text_size_15"
+                    android:textColor="@color/white"
+                    android:text="@string/live_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_width="1px"
+                android:layout_height="30dp"/>
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.ylive.phonelive.widget.BlackTextView
+                    android:textSize="@dimen/text_size_15"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tv_live_duration"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/text_size_15"
+                    android:textColor="@color/white"
+                    android:text="直播时长"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <View
+                android:background="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_width="1px"
+                android:layout_height="30dp"/>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.ylive.phonelive.widget.BlackTextView
+                    android:textSize="@dimen/text_size_15"
+                    android:layout_marginTop="10dp"
+                    android:text="0"
+                    android:id="@+id/tv_live_end_yp_num"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_live_end_yp_name"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/text_size_15"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <com.ylive.phonelive.widget.BlackButton
+            android:layout_marginBottom="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btn_back_index"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_return_index"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</LinearLayout>

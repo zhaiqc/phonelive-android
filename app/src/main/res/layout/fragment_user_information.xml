@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background">
+
+    <LinearLayout
+        android:id="@+id/rootview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.ylive.phonelive.ui.customviews.ActivityTitle
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/graywhite"
+            app:canBack="false"
+            app:titleColor="@color/black"
+            app:titleText="个人中心" />
+
+        <!--头部-->
+        <include layout="@layout/fragment_user_information_head" />
+
+
+        <com.ylive.phonelive.ui.customviews.LineControllerView
+            android:id="@+id/ll_profit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/lcv_ui_set"
+            android:layout_marginTop="10dp"
+            app:canNav="true"
+            app:iconRes="@mipmap/u_money"
+            app:isBottom="true"
+            app:name="@string/message" />
+
+        <View style="@style/h_line" />
+
+        <com.ylive.phonelive.ui.customviews.LineControllerView
+            android:id="@+id/ll_diamonds"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/ll_profit"
+            app:canNav="true"
+            app:iconRes="@mipmap/u_jewel"
+            app:isBottom="true" />
+
+        <View style="@style/h_line" />
+
+        <com.ylive.phonelive.ui.customviews.LineControllerView
+            android:id="@+id/ll_level"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/ll_diamonds"
+            app:canNav="true"
+            app:iconRes="@mipmap/u_level"
+            app:isBottom="true"
+            app:name="@string/blog" />
+
+        <View style="@style/h_line" />
+
+        <com.ylive.phonelive.ui.customviews.LineControllerView
+            android:id="@+id/ll_authenticate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/lcv_ui_set"
+            app:canNav="true"
+            app:iconRes="@mipmap/u_check"
+            app:isBottom="true"
+            app:name="@string/authenticate" />
+
+        <View style="@style/h_line" />
+
+        <com.ylive.phonelive.ui.customviews.LineControllerView
+            android:id="@+id/ll_about"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/ll_authenticate"
+            app:canNav="true"
+            app:iconRes="@mipmap/u_about"
+            app:isBottom="true"
+            app:name="关于我们" />
+
+        <View style="@style/h_line" />
+
+        <com.ylive.phonelive.ui.customviews.LineControllerView
+            android:id="@+id/ll_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/lcv_ui_set"
+            app:canNav="true"
+            app:iconRes="@mipmap/u_setting"
+            app:isBottom="true"
+            app:name="@string/team" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_loginout"
+            style="@style/option_item_rl"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <com.ylive.phonelive.widget.BlackTextView
+                style="@style/option_item_text"
+                android:layout_width="fill_parent"
+                android:gravity="center"
+                android:text="@string/loginout" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+    </LinearLayout>
+
+</ScrollView>

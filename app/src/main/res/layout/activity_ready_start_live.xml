@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--创建直播遮罩层-->
+
+    <RelativeLayout
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:id="@+id/rl_start_live_bg"
+        android:background="@drawable/create_room_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    style="@style/CustomCheckboxTheme"
+                    android:id="@+id/cb_set_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white"
+                    android:text="@string/pass_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_charge"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    style="@style/CustomCheckboxTheme"
+                    android:id="@+id/cb_set_charge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white"
+                    android:text="@string/open_charge_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/iv_live_exit"
+            android:layout_alignParentRight="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/room_btn_x_h"/>
+
+
+        <ImageView
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/iv_live_select_pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bg_select_pic"/>
+
+        <LinearLayout
+            android:layout_marginTop="240dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+           <com.ylive.phonelive.widget.BlackEditText
+               android:textSize="@dimen/text_size_25"
+                android:id="@+id/et_start_live_title"
+                android:gravity="center"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:background="@null"
+                android:hint="@string/create_edit_text_hint"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_live_share_weibo"
+                    android:src="@drawable/room_weibo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/iv_live_share_timeline"
+                    android:src="@drawable/room_timeline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/iv_live_share_wechat"
+                    android:src="@drawable/room_wechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/iv_live_share_qq"
+                    android:src="@drawable/room_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/iv_live_share_qqzone"
+                    android:src="@drawable/room_qqzone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.ylive.phonelive.widget.BlackButton
+                android:id="@+id/btn_start_live"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_start_live"
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_height="50dp" />
+
+            
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

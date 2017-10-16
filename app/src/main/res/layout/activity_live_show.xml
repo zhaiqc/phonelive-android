@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rl_live_root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:id="@+id/view_live_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/view_live_content"/>
+
+        <Button
+            android:id="@+id/btn_live_end_music"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="85dp"
+            android:background="@drawable/btn_live_transparent"
+            android:text="@string/musicEnd"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+        <!--歌词提示start-->
+        <include layout="@layout/view_live_music_lrc"/>
+        <!--歌词提示end-->
+
+
+        <!--底部菜单-->
+        <include layout="@layout/view_show_start_live_button_menu"/>
+        <ImageView
+            android:layout_marginTop="100dp"
+            android:id="@+id/iv_game_open"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_game_open"
+            android:layout_width="70dp"
+            android:layout_height="100dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <com.ylive.phonelive.ui.customviews.ActivityTitle
+        android:id="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/graywhite"
+        app:titleColor="@color/black"
+        app:titleText="@string/my_profit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_profit_tick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="映票"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <com.ylive.phonelive.widget.BlackTextView
+            android:id="@+id/tv_votes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="@color/global"
+            android:textSize="34dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.ylive.phonelive.widget.BlackTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/can_cash_money"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <com.ylive.phonelive.widget.BlackTextView
+            android:id="@+id/tv_profit_canwithdraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="@color/global"
+            android:textSize="34dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View style="@style/h_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.ylive.phonelive.widget.BlackTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/day_can_cash_money"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <com.ylive.phonelive.widget.BlackTextView
+            android:id="@+id/tv_profit_withdraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="0"
+            android:textColor="@color/global"
+            android:textSize="34dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_profit_cash"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/space_25"
+        android:layout_marginRight="@dimen/space_25"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_common"
+        android:text="@string/cash"
+        android:textColor="@color/white"
+        android:textSize="@dimen/abc_text_size_subhead_material" />
+
+    <com.ylive.phonelive.widget.BlackTextView
+        android:id="@+id/tv_common_problem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.70"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/space_10"
+        android:text="@string/commonproblem" />
+
+</LinearLayout>
