@@ -1,5 +1,7 @@
 package com.ylive.phonelive.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Administrator on 2016/3/28.
  */
@@ -18,13 +20,21 @@ public class GiftBean {
      * experience : 200
      */
 
+    @SerializedName("id")
     private int id;
+    @SerializedName("type")
     private int type;
+    @SerializedName("sid")
     private int sid;
+    @SerializedName("giftname")
     private String giftname;
+    @SerializedName("needcoin")
     private int needcoin;
+    @SerializedName("gifticon_mini")
     private String gifticon_mini;
+    @SerializedName("gifticon")
     private String gifticon;
+    @SerializedName("experience")
     private String experience;
 
     public int getId() {

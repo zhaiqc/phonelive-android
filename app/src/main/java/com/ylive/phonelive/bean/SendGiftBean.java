@@ -1,19 +1,32 @@
 package com.ylive.phonelive.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Administrator on 2016/3/30.
  */
 public class SendGiftBean {
+    @SerializedName("uid")
     private int uid;
+    @SerializedName("touid")
     private int touid;
+    @SerializedName("giftid")
     private int giftid;
+    @SerializedName("giftcount")
     private int giftcount;
+    @SerializedName("totalcoin")
     private int totalcoin;
+    @SerializedName("giftname")
     private String giftname;
+    @SerializedName("gifticon")
     private String gifticon;
+    @SerializedName("evensend")
     private String evensend;
+    @SerializedName("sendTime")
     private long sendTime;
+    @SerializedName("avatar")
     private String avatar;
+    @SerializedName("nicename")
     private String nicename;
 
     public String getAvatar() {

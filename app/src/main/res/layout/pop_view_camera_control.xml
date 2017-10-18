@@ -18,7 +18,12 @@
         android:layout_height="40dp"
         android:background="@drawable/room_btn_shanguang"/>
     <ImageView
-        android:visibility="gone"
+        android:id="@+id/iv_live_music"
+        android:layout_marginBottom="5dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_show_live_music" />
+    <ImageView
         android:id="@+id/iv_live_shar"
         android:layout_marginBottom="5dp"
         android:layout_width="40dp"

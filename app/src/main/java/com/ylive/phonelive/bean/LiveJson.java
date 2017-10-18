@@ -3,6 +3,8 @@ package com.ylive.phonelive.bean;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by weipeng on 2017/1/17.
  */
@@ -21,17 +23,32 @@ public class LiveJson implements Parcelable {
      * nums : 0
      */
 
+    @SerializedName("uid")
     public String uid;
+    @SerializedName("avatar")
     public String avatar;
+    @SerializedName("avatar_thumb")
     public String avatar_thumb;
+    @SerializedName("user_nicename")
     public String user_nicename;
+    @SerializedName("title")
     public String title;
+    @SerializedName("city")
     public String city;
+    @SerializedName("stream")
     public String stream;
+    @SerializedName("nums")
     public String nums;
+    @SerializedName("distance")
     public String distance;
+    @SerializedName("pull")
     public String pull;
+    @SerializedName("thumb")
     public String thumb;
+//    @SerializedName("label")
+//    public String label;
+    @SerializedName("admission")
+    public String admission;
 
 
     @Override
@@ -52,6 +69,8 @@ public class LiveJson implements Parcelable {
         dest.writeString(this.distance);
         dest.writeString(this.pull);
         dest.writeString(this.thumb);
+//        dest.writeString(this.label);
+        dest.writeString(this.admission);
     }
 
     public LiveJson() {
@@ -69,6 +88,8 @@ public class LiveJson implements Parcelable {
         this.distance = in.readString();
         this.pull = in.readString();
         this.thumb = in.readString();
+//        this.label = in.readString();
+        this.admission = in.readString();
     }
 
     public static final Parcelable.Creator<LiveJson> CREATOR = new Parcelable.Creator<LiveJson>() {

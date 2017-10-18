@@ -3,20 +3,30 @@ package com.ylive.phonelive.bean;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by weipeng on 2017/1/18.
  */
 
 public class SimpleUserInfo implements Parcelable {
-
+    @SerializedName("id")
     public String id;
+    @SerializedName("user_nicename")
     public String user_nicename;
+    @SerializedName("avatar")
     public String avatar;
+    @SerializedName("avatar_thumb")
     public String avatar_thumb;
+    @SerializedName("sex")
     public String sex;
+    @SerializedName("signature")
     public String signature;
+    @SerializedName("level")
     public String level;
+    @SerializedName("isattention")
     public String isattention;
+    @SerializedName("city")
     public String city;
 
 

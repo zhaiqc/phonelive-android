@@ -1,5 +1,7 @@
 package com.ylive.phonelive.ui;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -164,15 +166,14 @@ public class PhoneLoginActivity extends ToolBarBaseActivity implements PlatformA
     }
 
     private void otherLogin(String name){
-
         ShareSDK.initSDK(this);
-
         showWaitDialog("正在授权登录...",false);
         Platform other = ShareSDK.getPlatform(name);
-        other.showUser(null);//执行登录，登录后在回调里面获取用户资料
         other.SSOSetting(false);  //设置false表示使用SSO授权方式
+//        other.authorize();
+        other.showUser(null);//执行登录，登录后在回调里面获取用户资料
         other.setPlatformActionListener(this);
-        other.removeAccount(true);
+
     }
 
 
@@ -214,23 +215,23 @@ public class PhoneLoginActivity extends ToolBarBaseActivity implements PlatformA
             return true;
         }
 
-//        if (mEtUserPhone.length() == 0) {
-//            mEtUserPhone.setError("请输入手机号码");
-//            mEtUserPhone.requestFocus();
-//            return true;
-//        }
-//        if (mEtUserPhone.length() != 11) {
-//            mEtUserPhone.setError("请输入11位的手机号码");
-//            mEtUserPhone.requestFocus();
-//            return true;
-//        }
-//
-//        //HHH 2016-09-09
-//        if (mEtUserPassword.length() == 0) {
-//            mEtUserPassword.setError("请输入密码");
-//            mEtUserPassword.requestFocus();
-//            return true;
-//        }
+        if (mEtUserPhone.length() == 0) {
+            mEtUserPhone.setError("请输入手机号码");
+            mEtUserPhone.requestFocus();
+            return true;
+        }
+        if (mEtUserPhone.length() != 11) {
+            mEtUserPhone.setError("请输入11位的手机号码");
+            mEtUserPhone.requestFocus();
+            return true;
+        }
+
+        //HHH 2016-09-09
+        if (mEtUserPassword.length() == 0) {
+            mEtUserPassword.setError("请输入密码");
+            mEtUserPassword.requestFocus();
+            return true;
+        }
 
 
         return false;
@@ -242,7 +243,7 @@ public class PhoneLoginActivity extends ToolBarBaseActivity implements PlatformA
     }
 
     @Override
-    public void onComplete(Platform platform, int i, HashMap<String, Object> hashMap) {
+    public void onComplete(Platform platform, final int i, HashMap<String, Object> hashMap) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -258,7 +259,12 @@ public class PhoneLoginActivity extends ToolBarBaseActivity implements PlatformA
             PlatformDb platDB = platform.getDb();//获取数平台数据DB
             //通过DB获取各种数据
             PhoneLiveApi.otherLogin(type,platDB,callback);
+            //如果要删除授权信息，重新授权
+            platform.removeAccount(true);
         }
+
+
+
 
     }
 

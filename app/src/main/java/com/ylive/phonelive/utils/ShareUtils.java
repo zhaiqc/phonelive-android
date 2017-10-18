@@ -68,17 +68,16 @@ public class ShareUtils {
                 if(res != null){
                     try {
                         JSONObject jsonObject = res.getJSONObject(0);
-                        String     shareUrl = jsonObject.getString("app_android");
+//                         = jsonObject.getString("app_android");
+//                        Log.d("shareUrl:", shareUrl);
 
 
-                        if(index == 1 || index == 2){
-                            shareUrl = jsonObject.getString("wx_siteurl") + user.id;
-                        }
+//                        if(index == 1 || index == 2){
+                        String shareUrl = jsonObject.getString("wx_siteurl") + user.id;
+//                        }
+                        String[] names = new String[]{SinaWeibo.NAME, Wechat.NAME, WechatMoments.NAME, QQ.NAME, QZone.NAME};
 
-                        String[] names = new  String[]{SinaWeibo.NAME,Wechat.NAME,WechatMoments.NAME,QQ.NAME,QZone.NAME};
-
-                        share(context,names[index],jsonObject.getString("share_title")
-                                ,user.user_nicename + jsonObject.getString("share_des"),user,shareUrl,listener);
+                        share(context, names[index], jsonObject.getString("share_title"), user.user_nicename + jsonObject.getString("share_des"), user, shareUrl, listener);
 
                     } catch (JSONException e) {
                         e.printStackTrace();

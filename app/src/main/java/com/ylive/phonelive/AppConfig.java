@@ -28,6 +28,8 @@ public class AppConfig {
     public static int ROOM_CHARGE_SWITCH = 0;//收费房间开关
     public static int ROOM_PASSWORD_SWITCH = 0;//密码房间开关
     public static final String RTC_AUTH_SERVER = "http://rtc.vcloud.ks-live.com:6002/rtcauth";
+    public static String USER_VERSION = "";//最新版本
+    public static String APK_URL = "";//下载地址
 
     private final static String APP_CONFIG = "config";
 

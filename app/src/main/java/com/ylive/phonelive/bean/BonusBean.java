@@ -1,5 +1,7 @@
 package com.ylive.phonelive.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -7,15 +9,17 @@ import java.util.List;
  * Created by mengyunfeng on 17/4/7.
  */
 
-public class BonusBean implements Serializable{
+public class BonusBean implements Serializable {
     /**
      * bonus_switch : 1
      * bonus_day : 0
      * bonus_list : [{"day":"1","coin":"10"},{"day":"2","coin":"20"},{"day":"3","coin":"30"},{"day":"4","coin":"40"},{"day":"5","coin":"50"},{"day":"6","coin":"60"},{"day":"7","coin":"70"}]
      */
-
+    @SerializedName("bonus_switch")
     private String bonus_switch;
+    @SerializedName("bonus_day")
     private String bonus_day;
+    @SerializedName("bonus_list")
     private List<BonusListBean> bonus_list;
 
     public String getBonus_switch() {
@@ -47,8 +51,9 @@ public class BonusBean implements Serializable{
          * day : 1
          * coin : 10
          */
-
+        @SerializedName("day")
         private String day;
+        @SerializedName("coin")
         private String coin;
 
         public String getDay() {

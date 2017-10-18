@@ -92,10 +92,15 @@ public class SettingActivity extends ToolBarBaseActivity {
     }
 
     private void checkNewVersion() {
-        UpdateManager manager = new UpdateManager(this, true);
-        manager.checkUpdate();
-
-
+        UpdateManager manager;
+        if (!AppConfig.USER_VERSION.equals(TDevice.getVersionName())) {
+            manager = new UpdateManager(this, true);
+            manager.checkUpdate(AppConfig.APK_URL);
+//            Log.d("checkNewVersion: ", AppConfig.APK_URL);
+        } else {
+            manager = new UpdateManager(this, false);
+            manager.checkUpdate(AppConfig.APK_URL);
+        }
     }
 
     private void clearCache() {

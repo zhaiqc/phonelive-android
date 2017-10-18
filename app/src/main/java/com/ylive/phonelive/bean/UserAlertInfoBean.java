@@ -1,15 +1,24 @@
 package com.ylive.phonelive.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * 弹窗用户基本信息
  */
 public class UserAlertInfoBean {
+    @SerializedName("attention")
     private String attention;
+    @SerializedName("fans")
     private String fans;
+    @SerializedName("consumption")
     private String consumption;
+    @SerializedName("votestotal")
     private String votestotal;
+    @SerializedName("isblackto")
     private int isblackto;
+    @SerializedName("level")
     private int level;
+    @SerializedName("city")
     private String city;
 
     public int getId() {

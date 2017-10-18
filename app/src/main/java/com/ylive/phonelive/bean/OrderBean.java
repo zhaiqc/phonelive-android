@@ -1,15 +1,24 @@
 package com.ylive.phonelive.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Administrator on 2016/4/5.
  */
 public class OrderBean {
+    @SerializedName("total")
     private String total;
+    @SerializedName("uid")
     private String uid;
+    @SerializedName("user_nicename")
     private String user_nicename;
+    @SerializedName("avatar")
     private String avatar;
+    @SerializedName("sex")
     private String sex;
+    @SerializedName("level")
     private String level;
+    @SerializedName("orderNo")
     private String orderNo;
 
     public String getOrderNo() {

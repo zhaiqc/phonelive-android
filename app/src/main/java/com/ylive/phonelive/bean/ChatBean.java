@@ -2,14 +2,21 @@ package com.ylive.phonelive.bean;
 
 import android.text.SpannableStringBuilder;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Administrator on 2016/3/16.
  */
 public class ChatBean{
+    @SerializedName("userNick")
     private SpannableStringBuilder userNick;
+    @SerializedName("sendChatMsg")
     private SpannableStringBuilder sendChatMsg;
+    @SerializedName("type")
     private int type;
+    @SerializedName("content")
     private String content;//聊天纯文本 HHH
+    @SerializedName("mSimpleUserInfo")
     public SimpleUserInfo mSimpleUserInfo;
 
 

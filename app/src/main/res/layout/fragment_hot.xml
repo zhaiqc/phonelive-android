@@ -19,7 +19,6 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:src="@mipmap/h_search" />
-
         <RelativeLayout
             android:id="@+id/fl_tab_container"
             android:layout_width="270dp"

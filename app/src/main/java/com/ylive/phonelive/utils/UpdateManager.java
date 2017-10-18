@@ -47,11 +47,12 @@ public class UpdateManager {
 
 
     //检测是否需要更新
-    public void checkUpdate() {
+    public void checkUpdate(String apkUrl) {
         if (isShow) {
-            showCheckDialog();
+            showUpdateInfo(apkUrl);
         }
         PhoneLiveApi.getConfig(callback);
+
     }
 
     private StringCallback callback = new StringCallback() {
@@ -99,25 +100,26 @@ public class UpdateManager {
     }
 
     //弹窗提示
-    private void showUpdateInfo(final String apiUrl) {
+    private void showUpdateInfo(final String apkUrl) {
         final AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
         builder.setTitle("提示");
         builder.setMessage("发现新版本!");
-        /*builder.setNegativeButton("取消", new android.content.DialogInterface.OnClickListener() {
+        builder.setNegativeButton("取消", new android.content.DialogInterface.OnClickListener() {
             @Override
             public void onClick(android.content.DialogInterface dialogInterface, int i) {
 
             }
-        });*/
+        });
         builder.setPositiveButton("确定", new android.content.DialogInterface.OnClickListener() {
             @Override
             public void onClick(android.content.DialogInterface dialogInterface, int i) {
                 //upDataApp(apiUrl);
 
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(apiUrl));
+                Intent intent = new Intent();
+                intent.setAction("android.intent.action.VIEW");
+                Uri content_url = Uri.parse(apkUrl);
+                intent.setData(content_url);
                 mContext.startActivity(intent);
-                dialog.dismiss();
             }
         });
         dialog = builder.create();

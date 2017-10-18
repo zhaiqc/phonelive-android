@@ -9,7 +9,7 @@
         android:paddingLeft="20dp"
         android:paddingTop="20dp"
         android:id="@+id/rl_start_live_bg"
-        android:background="@drawable/create_room_bg"
+        android:background="@drawable/bg1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

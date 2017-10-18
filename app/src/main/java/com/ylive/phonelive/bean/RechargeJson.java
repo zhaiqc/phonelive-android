@@ -1,5 +1,7 @@
 package com.ylive.phonelive.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -23,17 +25,28 @@ public class RechargeJson {
      * wx_mchid :
      * wx_key :
      */
-
+    @SerializedName("coin")
     public String coin;
+    @SerializedName("aliapp_switch")
     public String aliapp_switch;
+    @SerializedName("aliapp_partner")
     public String aliapp_partner;
+    @SerializedName("aliapp_seller_id")
     public String aliapp_seller_id;
+    @SerializedName("aliapp_key_android")
     public String aliapp_key_android;
+    @SerializedName("aliapp_key_ios")
     public String aliapp_key_ios;
+    @SerializedName("wx_switch")
     public String wx_switch;
+    @SerializedName("wx_appid")
     public String wx_appid;
+    @SerializedName("wx_appsecret")
     public String wx_appsecret;
+    @SerializedName("wx_mchid")
     public String wx_mchid;
+    @SerializedName("wx_key")
     public String wx_key;
+    @SerializedName("rules")
     public List<RechargeBean> rules;
 }

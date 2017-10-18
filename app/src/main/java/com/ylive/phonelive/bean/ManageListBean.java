@@ -1,5 +1,7 @@
 package com.ylive.phonelive.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Administrator on 2016/5/20.
  */
@@ -19,18 +21,29 @@ public class ManageListBean {
      * isrecommend : 0
      * level : 6
      */
-
+    @SerializedName("id")
     private int id;
+    @SerializedName("user_nicename")
     private String user_nicename;
+    @SerializedName("avatar")
     private String avatar;
+    @SerializedName("sex")
     private int sex;
+    @SerializedName("signature")
     private String signature;
+    @SerializedName("experience")
     private String experience;
+    @SerializedName("consumption")
     private String consumption;
+    @SerializedName("votestotal")
     private String votestotal;
+    @SerializedName("province")
     private String province;
+    @SerializedName("city")
     private String city;
+    @SerializedName("isrecommend")
     private String isrecommend;
+    @SerializedName("level")
     private int level;
 
     public int getId() {

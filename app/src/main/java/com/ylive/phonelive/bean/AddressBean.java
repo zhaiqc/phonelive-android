@@ -1,9 +1,14 @@
 package com.ylive.phonelive.bean;
 
 
+import com.google.gson.annotations.SerializedName;
+
 public class AddressBean {
+    @SerializedName("country")
     private String country;
+    @SerializedName("province")
     private String province;
+    @SerializedName("city")
     private String city;
 
     public String getCountry() {

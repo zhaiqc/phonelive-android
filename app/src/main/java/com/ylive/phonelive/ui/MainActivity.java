@@ -61,6 +61,9 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import cn.jpush.android.api.JPushInterface;
 import cn.jpush.android.api.TagAliasCallback;
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.wechat.friends.Wechat;
 import okhttp3.Call;
 
 
@@ -88,6 +91,7 @@ public class MainActivity extends ToolBarBaseActivity implements
 
     @Override
     public void initView() {
+
         AppManager.getAppManager().addActivity(this);
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
         if (Build.VERSION.SDK_INT > 10) {
@@ -154,6 +158,7 @@ public class MainActivity extends ToolBarBaseActivity implements
 
     @Override
     public void initData() {
+        updateConfig();
         //检查token是否过期
         checkTokenIsOutTime();
         //注册极光推送
@@ -161,10 +166,7 @@ public class MainActivity extends ToolBarBaseActivity implements
         //登录环信
         loginIM();
         //检查是否有最新版本
-        checkNewVersion();
-
-        updateConfig();
-
+//        checkNewVersion();
 
 
         mTabHost.setCurrentTab(0);
@@ -178,6 +180,8 @@ public class MainActivity extends ToolBarBaseActivity implements
 
         initAMap();
     }
+
+
 
     private void updateConfig() {
 
@@ -200,6 +204,8 @@ public class MainActivity extends ToolBarBaseActivity implements
                 JSONArray res = ApiUtils.checkIsSuccess(response);
                 if (res != null) {
                     try {
+                        AppConfig.APK_URL = res.getJSONObject(0).getString("apk_url");
+                        AppConfig.USER_VERSION = res.getJSONObject(0).getString("apk_ver");
                         AppConfig.TICK_NAME = res.getJSONObject(0).getString("name_votes");
                         AppConfig.CURRENCY_NAME = res.getJSONObject(0).getString("name_coin");
                         AppConfig.JOIN_ROOM_ANIMATION_LEVEL = res.getJSONObject(0).getInt("enter_tip_level");
@@ -219,6 +225,8 @@ public class MainActivity extends ToolBarBaseActivity implements
                         e.printStackTrace();
                     }
                 }
+                //检查是否有最新版本
+                checkNewVersion();
             }
         });
     }
@@ -246,6 +254,7 @@ public class MainActivity extends ToolBarBaseActivity implements
             }
         }
     }
+
     //请求服务端开始直播
     private void requestStartLive() {
         UIHelper.showStartLiveActivity(MainActivity.this);
@@ -274,6 +283,7 @@ public class MainActivity extends ToolBarBaseActivity implements
                             }
                         });
                     }
+
                     @Override
                     public void onProgress(int progress, String status) {
 
@@ -322,8 +332,13 @@ public class MainActivity extends ToolBarBaseActivity implements
      * @dw 检查是否有最新版本
      */
     private void checkNewVersion() {
-        UpdateManager manager = new UpdateManager(this, false);
-        manager.checkUpdate();
+        UpdateManager manager;
+//        Log.d("checkNewVersion:", AppConfig.USER_VERSION + "hahahahaahahah");
+        if (!AppConfig.USER_VERSION.equals(TDevice.getVersionName())) {
+            manager = new UpdateManager(this, true);
+            manager.checkUpdate(AppConfig.APK_URL);
+//            Log.d("checkNewVersion: ", AppConfig.APK_URL);
+        }
 
     }
 

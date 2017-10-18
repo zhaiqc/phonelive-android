@@ -16,11 +16,11 @@ android {
         useNewCruncher=false
     }
     defaultConfig {
-        applicationId "com.yunbao.phonelive"
+        applicationId "com.ylive.phonelive"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 3
-        versionName "2.1.16"
+        versionName "2.1.17"
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
     buildTypes {

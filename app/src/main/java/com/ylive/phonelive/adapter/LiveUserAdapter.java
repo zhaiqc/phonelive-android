@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 
 import com.ylive.phonelive.AppContext;
 import com.ylive.phonelive.bean.LiveJson;
@@ -54,6 +55,7 @@ public class LiveUserAdapter extends BaseAdapter {
             viewHolder.mUserHead = (AvatarView) convertView.findViewById(R.id.iv_live_user_head);
             viewHolder.mUserPic = (LoadUrlImageView) convertView.findViewById(R.id.iv_live_user_pic);
             viewHolder.mRoomTitle = (BlackTextView) convertView.findViewById(R.id.tv_hot_room_title);
+            viewHolder.mIvLabel = (ImageView) convertView.findViewById(R.id.iv_label);
             convertView.setTag(viewHolder);
         }
         LiveJson live = mUserList.get(position);
@@ -62,6 +64,13 @@ public class LiveUserAdapter extends BaseAdapter {
         viewHolder.mUserLocal.setText(live.city);
         viewHolder.mUserHead.setAvatarUrl(live.avatar_thumb);
         viewHolder.mUserNums.setText(live.nums);
+
+        if (live.admission != null)
+            if (live.admission.equals("") ) {
+                viewHolder.mIvLabel.setVisibility(View.GONE);
+            } else if (live.admission.equals("收费")) {
+                viewHolder.mIvLabel.setVisibility(View.VISIBLE);
+            }
         //用于平滑加载图片
         SimpleUtils.loadImageForView(AppContext.getInstance(),viewHolder.mUserPic,live.thumb,0);
 
@@ -79,6 +88,7 @@ public class LiveUserAdapter extends BaseAdapter {
         public BlackTextView mUserNick,mUserLocal,mUserNums,mRoomTitle;
         public LoadUrlImageView mUserPic;
         public AvatarView mUserHead;
+        public ImageView mIvLabel;
     }
 }
 

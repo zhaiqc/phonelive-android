@@ -60,6 +60,7 @@ public class NewestAdapter extends BaseAdapter {
             viewHolder.iv_bg= (ImageView) convertView.findViewById(R.id.iv_news_bg);
             viewHolder.iv_bg.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, wh));
             viewHolder.tv_name = (TextView) convertView.findViewById(R.id.item_tv_name);
+            viewHolder.mIvLabel = (ImageView) convertView.findViewById(R.id.iv_label);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -67,12 +68,17 @@ public class NewestAdapter extends BaseAdapter {
 
         LiveJson u = mUserList.get(position);
         viewHolder.tv_name.setText(u.user_nicename);
+        if (u.admission.equals("") || u.admission == null) {
+            viewHolder.mIvLabel.setVisibility(View.GONE);
+        } else if (u.admission.equals("收费")) {
+            viewHolder.mIvLabel.setVisibility(View.VISIBLE);
+        }
         SimpleUtils.loadImageForView(AppContext.getInstance(),viewHolder.mUHead,u.thumb,0);
         return convertView;
     }
 
     class ViewHolder {
-        ImageView mUHead,iv_bg;
+        ImageView mUHead, iv_bg, mIvLabel;
         TextView tv_name;
     }
 }

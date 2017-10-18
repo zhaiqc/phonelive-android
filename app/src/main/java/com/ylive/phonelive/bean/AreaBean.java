@@ -1,8 +1,12 @@
 package com.ylive.phonelive.bean;
 
 
+import com.google.gson.annotations.SerializedName;
+
 public class AreaBean {
+    @SerializedName("province")
     private String province;
+    @SerializedName("total")
     private int total;
 
     public String getProvince() {

@@ -36,6 +36,7 @@ import com.ylive.phonelive.ui.UserProfitActivity;
 import com.ylive.phonelive.ui.UserSelectAvatarActivity;
 import com.ylive.phonelive.ui.SimpleBackActivity;
 import com.ylive.phonelive.ui.VideoPlayerActivity;
+import com.ylive.phonelive.ui.WebPayActivity;
 import com.ylive.phonelive.ui.WebViewActivity;
 
 /**
@@ -66,6 +67,19 @@ public class UIHelper {
         Intent intent = new Intent(context, PhoneLoginActivity.class);
         context.startActivity(intent);
     }
+
+    /**
+     * 网页支付
+     *
+     * @return
+     */
+    public static void showWebPay(Context context, String position) {
+        Intent intent = new Intent(context, WebPayActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.putExtra("position", position);
+        context.startActivity(intent);
+    }
+
 
     /**
      * 手机密码注册 HHH 2016-09-09
@@ -107,12 +121,11 @@ public class UIHelper {
      */
     public static void showMainActivity(Context context) {
         Intent intent = new Intent();
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
-                Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         intent.setClass(context, MainActivity.class);
         //Intent intent = new Intent(context, MainActivity.class);
         context.startActivity(intent);
-
+ 
     }
     /**
      * 我的详细资料

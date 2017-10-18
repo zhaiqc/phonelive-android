@@ -2,13 +2,13 @@ package com.ylive.phonelive.ui.other;
 
 import android.content.Context;
 
-import com.ksyun.media.rtc.kit.KSYRtcStreamer;
+import com.ksyun.media.streamer.kit.KSYStreamer;
 
 
 /**
  * Created by weipeng on 16/9/8.
  */
-public class LiveStream extends KSYRtcStreamer {
+public class LiveStream extends KSYStreamer {
     private int musicVolue;
     private int mvoice ;
     public LiveStream(Context context) {

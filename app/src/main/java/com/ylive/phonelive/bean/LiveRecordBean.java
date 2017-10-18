@@ -4,16 +4,28 @@ package com.ylive.phonelive.bean;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 public class LiveRecordBean implements Parcelable {
+    @SerializedName("uid")
     private int uid;
+    @SerializedName("showid")
     private String showid;
+    @SerializedName("islive")
     private int islive;
+    @SerializedName("starttime")
     private String starttime;
+    @SerializedName("endtime")
     private String endtime;
+    @SerializedName("nums")
     private String nums;
+    @SerializedName("title")
     private String title;
+    @SerializedName("datetime")
     private String datetime;
+    @SerializedName("video_url")
     private String video_url;
+    @SerializedName("id")
     private String id;
 
     public String getId() {

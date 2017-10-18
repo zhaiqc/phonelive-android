@@ -1,25 +1,31 @@
 package com.ylive.phonelive.fragment;
 
+/**
+ * Created by zqc on 2017/10/13.
+ */
+
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import com.ylive.phonelive.AppContext;
+import com.ylive.phonelive.R;
 import com.ylive.phonelive.adapter.NewestAdapter;
 import com.ylive.phonelive.api.remote.ApiUtils;
+import com.ylive.phonelive.api.remote.PhoneLiveApi;
 import com.ylive.phonelive.base.BaseFragment;
 import com.ylive.phonelive.bean.LiveJson;
 import com.ylive.phonelive.ui.VideoPlayerActivity;
 import com.ylive.phonelive.ui.other.OnItemEvent;
 import com.ylive.phonelive.utils.StringUtils;
 import com.ylive.phonelive.utils.TDevice;
-import com.google.gson.Gson;
-import com.ylive.phonelive.R;
-import com.ylive.phonelive.api.remote.PhoneLiveApi;
 import com.ylive.phonelive.widget.HeaderGridView;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
@@ -34,10 +40,12 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import okhttp3.Call;
 
+
+
 /**
  * 首页最新直播
  */
-public class NewestFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
+public class ChargeFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener {
 
     List<LiveJson> mUserList = new ArrayList<>();
 
@@ -79,11 +87,11 @@ public class NewestFragment extends BaseFragment implements SwipeRefreshLayout.O
         mNewestLiveView.setOnItemClickListener(new OnItemEvent(1000) {
             @Override
             public void singleClick(View v, int position) {
-                if (AppContext.getInstance().getLoginUid() == null|| StringUtils.toInt(AppContext.getInstance().getLoginUid())==0) {
-                    Toast.makeText(getContext(),"请登录..",Toast.LENGTH_SHORT).show();
+                if (AppContext.getInstance().getLoginUid() == null || StringUtils.toInt(AppContext.getInstance().getLoginUid()) == 0) {
+                    Toast.makeText(getContext(), "请登录..", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                VideoPlayerActivity.startVideoPlayerActivity(getContext(), mUserList.get(position ));
+                VideoPlayerActivity.startVideoPlayerActivity(getContext(), mUserList.get(position));
             }
 
         });
@@ -94,24 +102,23 @@ public class NewestFragment extends BaseFragment implements SwipeRefreshLayout.O
     //最新主播数据请求
     private void requestData() {
 
-        PhoneLiveApi.getNewestUserList(new StringCallback() {
+        PhoneLiveApi.getChargeUserList(new StringCallback() {
             @Override
-            public void onError(Call call, Exception e,int id) {
+            public void onError(Call call, Exception e, int id) {
 
-                if(mRefresh!=null) {
-
+                if (mRefresh != null) {
                     mRefresh.setRefreshing(false);
                     mFensi.setVisibility(View.GONE);
                     mLoad.setVisibility(View.VISIBLE);
-                    mNewestLiveView.setVisibility(View.INVISIBLE );
+                    mNewestLiveView.setVisibility(View.INVISIBLE);
                 }
 
             }
 
             @Override
-            public void onResponse(String response,int id) {
-
-                if(mRefresh!=null) {
+            public void onResponse(String response, int id) {
+                Log.d("onResponse: ",response );
+                if (mRefresh != null) {
                     mRefresh.setRefreshing(false);
                 }
 
@@ -126,9 +133,9 @@ public class NewestFragment extends BaseFragment implements SwipeRefreshLayout.O
                             mUserList.add(g.fromJson(resUserListJsonArr.getString(i), LiveJson.class));
                         }
 
-                        if (mUserList.size() > 0){
+                        if (mUserList.size() > 0) {
                             fillUI();
-                        }else{
+                        } else {
 
                             mFensi.setVisibility(View.VISIBLE);
                             mLoad.setVisibility(View.GONE);
@@ -138,7 +145,7 @@ public class NewestFragment extends BaseFragment implements SwipeRefreshLayout.O
 
                         e.printStackTrace();
                     }
-                }else{
+                } else {
                     mFensi.setVisibility(View.VISIBLE);
                     mLoad.setVisibility(View.GONE);
                     mNewestLiveView.setVisibility(View.INVISIBLE);
@@ -149,10 +156,17 @@ public class NewestFragment extends BaseFragment implements SwipeRefreshLayout.O
     }
 
     private void fillUI() {
+        if (mFensi != null) {
+            mFensi.setVisibility(View.GONE);
+        }
+        if (mLoad != null) {
+            mLoad.setVisibility(View.GONE);
+        }
+        if (mNewestLiveView != null) {
+            mNewestLiveView.setVisibility(View.VISIBLE);
+        }
 
-        mFensi.setVisibility(View.GONE);
-        mLoad.setVisibility(View.GONE);
-        mNewestLiveView.setVisibility(View.VISIBLE);
+
         if (getActivity() != null) {
             //设置每个主播宽度
             int w = (int) TDevice.getScreenWidth();

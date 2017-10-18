@@ -424,7 +424,7 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
                     break;
                 case RTCClient.RTC_ERROR_REGISTED_FAILED:
                     mIsRegisted = false;
-                    mStreamer.getRtcClient().registerRTC();
+//                    mStreamer.getRtcClient().registerRTC();
                     break;
                 case RTCClient.RTC_ERROR_SERVER_ERROR:
                     Toast.makeText(StartLiveActivity.this, "RTC_ERROR_SERVER_ERROR", Toast.LENGTH_SHORT).show();
@@ -447,23 +447,23 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
             int width = view.getWidth();
             int height = view.getHeight();
             //小窗的位置信息
-            RectF subRect = mStreamer.getRTCSubScreenRect();
-            int left = (int) (subRect.left * width);
-            int right = (int) (subRect.right * width);
-            int top = (int) (subRect.top * height);
-            int bottom = (int) (subRect.bottom * height);
-            int subWidth = right - left;
-            int subHeight = bottom - top;
+//            RectF subRect = mStreamer.getRTCSubScreenRect();
+//            int left = (int) (subRect.left * width);
+//            int right = (int) (subRect.right * width);
+//            int top = (int) (subRect.top * height);
+//            int bottom = (int) (subRect.bottom * height);
+//            int subWidth = right - left;
+//            int subHeight = bottom - top;
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
                     //只有在小屏区域才触发位置改变
-                    if (isSubScreenArea(event.getX(), event.getY(), left, right, top, bottom, mIsConnected)) {
-                        //获取相对sub区域的坐标，即以sub左上角为原点
-                        mSubTouchStartX = event.getX() - left;
-                        mSubTouchStartY = event.getY() - top;
-                        mLastX = event.getX();
-                        mLastY = event.getY();
-                    }
+//                    if (isSubScreenArea(event.getX(), event.getY(), left, right, top, bottom, mIsConnected)) {
+//                        //获取相对sub区域的坐标，即以sub左上角为原点
+//                        mSubTouchStartX = event.getX() - left;
+//                        mSubTouchStartY = event.getY() - top;
+//                        mLastX = event.getX();
+//                        mLastY = event.getY();
+//                    }
                     break;
                 case MotionEvent.ACTION_MOVE:
                     int moveX = (int) Math.abs(event.getX() - mLastX);
@@ -473,15 +473,15 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
                                     (moveY > SUB_TOUCH_MOVE_MARGIN))) {
                         //触发移动
                         mIsSubMoved = true;
-                        updateSubPosition(width, height, subWidth, subHeight, mStreamer);
+//                        updateSubPosition(width, height, subWidth, subHeight, mStreamer);
                     }
                     break;
                 case MotionEvent.ACTION_UP:
                     //未移动并且在小窗区域，则触发大小窗切换
-                    if (!mIsSubMoved && isSubScreenArea(event.getX(), event.getY(), left, right,
-                            top, bottom, mIsConnected)) {
-                        mStreamer.switchRTCMainScreen();
-                    }
+//                    if (!mIsSubMoved && isSubScreenArea(event.getX(), event.getY(), left, right,
+//                            top, bottom, mIsConnected)) {
+//                        mStreamer.switchRTCMainScreen();
+//                    }
                     mIsSubMoved = false;
                     mSubTouchStartX = 0f;
                     mSubTouchStartY = 0f;
@@ -509,8 +509,8 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
         mStreamer.setOnInfoListener(mOnInfoListener);
         mStreamer.setOnErrorListener(mOnErrorListener);
 
-        mStreamer.getRtcClient().setRTCErrorListener(mRTCErrorListener);
-        mStreamer.getRtcClient().setRTCEventListener(mRTCEventListener);
+//        mStreamer.getRtcClient().setRTCErrorListener(mRTCErrorListener);
+//        mStreamer.getRtcClient().setRTCEventListener(mRTCEventListener);
 
         mCameraTouchHelper = new CameraTouchHelper();
         mCameraTouchHelper.setCameraCapture(mStreamer.getCameraCapture());
@@ -540,7 +540,7 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            //打开游戏
+//            打开游戏
             case R.id.iv_game_open:
                 if (mJinHuaPokersLayout.getVisibility() != View.VISIBLE && mConnectionState) {
                     mChatServer.doSendOpenGame(mUser);
@@ -619,7 +619,7 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
             case R.id.iv_live_rtc:
                 if (mIsConnected) {
                     try {
-                        mStreamer.getRtcClient().stopCall();
+//                        mStreamer.getRtcClient().stopCall();
                         mMusic.setVisibility(View.VISIBLE);
                     } catch (Exception e) {
 
@@ -635,17 +635,17 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
     //连麦注册
     private void doRegister(String authString) {
         //小屏
-        mStreamer.setRTCSubScreenRect(0.65f, 0.1f, 0.35f, 0.3f,
-                RTCConstants.SCALING_MODE_CENTER_CROP);
-        mStreamer.getRtcClient().setRTCAuthInfo(RTC_AUTH_URI, authString,
-                mRoomNum);
-        mStreamer.getRtcClient().setRTCUniqueName(RTC_UINIQUE_NAME);
-        mStreamer.getRtcClient().openChattingRoom(false);
-        mStreamer.setRTCMainScreen(RTCConstants.RTC_MAIN_SCREEN_CAMERA);
-        mStreamer.getRtcClient().setRTCResolutionScale(0.5f);
-        mStreamer.getRtcClient().setRTCFps(20);
-        mStreamer.getRtcClient().setRTCMode(0);
-        mStreamer.getRtcClient().registerRTC();
+//        mStreamer.setRTCSubScreenRect(0.65f, 0.1f, 0.35f, 0.3f,
+//                RTCConstants.SCALING_MODE_CENTER_CROP);
+//        mStreamer.getRtcClient().setRTCAuthInfo(RTC_AUTH_URI, authString,
+//                mRoomNum);
+//        mStreamer.getRtcClient().setRTCUniqueName(RTC_UINIQUE_NAME);
+//        mStreamer.getRtcClient().openChattingRoom(false);
+//        mStreamer.setRTCMainScreen(RTCConstants.RTC_MAIN_SCREEN_CAMERA);
+//        mStreamer.getRtcClient().setRTCResolutionScale(0.5f);
+//        mStreamer.getRtcClient().setRTCFps(20);
+//        mStreamer.getRtcClient().setRTCMode(0);
+//        mStreamer.getRtcClient().registerRTC();
     }
 
     private void onRTCRegisterClick() {
@@ -681,7 +681,7 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
     }
 
     private void doUnRegister() {
-        mStreamer.getRtcClient().unRegisterRTC();
+//        mStreamer.getRtcClient().unRegisterRTC();
         mIsRegisted = false;
         Toast.makeText(this, "unregister waiting...", Toast
                 .LENGTH_SHORT).show();
@@ -1070,7 +1070,7 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
                                     @Override
                                     public void cancelDialog(View v, Dialog d) {
                                         try {
-                                            mStreamer.getRtcClient().rejectCall();
+//                                            mStreamer.getRtcClient().rejectCall();
                                         } catch (Exception e) {
                                             d.dismiss();
                                         }
@@ -1081,7 +1081,7 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
                                     @Override
                                     public void determineDialog(View v, Dialog d) {
                                         try {
-                                            mStreamer.getRtcClient().answerCall();
+//                                            mStreamer.getRtcClient().answerCall();
                                         } catch (Exception e) {
                                             d.dismiss();
                                         }
@@ -1312,7 +1312,7 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
         stopMusic();
         //停止直播
         if (mStreamer != null && mIsRegisted) {
-            mStreamer.getRtcClient().unRegisterRTC();
+//            mStreamer.getRtcClient().unRegisterRTC();
         }
         mStreamer.stopCameraPreview();
         mStreamer.stopStream();
@@ -1626,6 +1626,13 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
                 ShareUtils.showSharePopWindow(StartLiveActivity.this, mIvCameraControl);
             }
         });
+        popView.findViewById(R.id.iv_live_music).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showSearchMusicDialog();
+            }
+        });
+
         PopupWindow popupWindow = new PopupWindow(popView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
         popView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
         popupWindow.setFocusable(true);

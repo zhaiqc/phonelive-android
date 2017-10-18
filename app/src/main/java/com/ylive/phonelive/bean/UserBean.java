@@ -3,16 +3,23 @@ package com.ylive.phonelive.bean;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  *
  */
 public class UserBean extends SimpleUserInfo implements Parcelable {
-
+    @SerializedName("birthday")
     public String birthday;
+    @SerializedName("coin")
     public String coin;
+    @SerializedName("token")
     public String token;
+    @SerializedName("votes")
     public String votes;
+    @SerializedName("consumption")
     public String consumption;
+    @SerializedName("uType")
     public String uType;
 
 

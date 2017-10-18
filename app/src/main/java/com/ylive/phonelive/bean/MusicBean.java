@@ -1,5 +1,7 @@
 package com.ylive.phonelive.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Administrator on 2016/5/4.
  */
@@ -11,9 +13,11 @@ public class MusicBean {
      * audio_name : 啊
      * artist_name : 葛亮
      */
-
+    @SerializedName("audio_id")
     public String audio_id;
+    @SerializedName("audio_name")
     public String audio_name;
+    @SerializedName("artist_name")
     public String artist_name;
 
 }

@@ -20,6 +20,7 @@ import com.ylive.phonelive.api.remote.ApiUtils;
 import com.ylive.phonelive.api.remote.PhoneLiveApi;
 import com.ylive.phonelive.base.ToolBarBaseActivity;
 import com.ylive.phonelive.bean.RechargeBean;
+import com.ylive.phonelive.utils.UIHelper;
 import com.ylive.phonelive.widget.BlackTextView;
 import com.zhy.http.okhttp.callback.StringCallback;
 
@@ -77,17 +78,18 @@ public class UserDiamondsActivity extends ToolBarBaseActivity {
         mSelectNumListItem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+                UIHelper.showWebPay(getBaseContext(), String.valueOf(position));
 
-                DialogHelp.getSelectDialog(UserDiamondsActivity.this, new String[]{"支付宝", "微信"}, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                        PAY_MODE = i == 0 ? ALI_PAY : WX_PAY;
-
-                        actionPay(String.valueOf(mRechargeList.get(position - 1).money), mRechargeList.get(position - 1).coin
-                                ,mRechargeList.get(position - 1).id);
-                    }
-                }).create().show();
+//                DialogHelp.getSelectDialog(UserDiamondsActivity.this, new String[]{"支付宝", "微信"}, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                        PAY_MODE = i == 0 ? ALI_PAY : WX_PAY;
+//
+//                        actionPay(String.valueOf(mRechargeList.get(position - 1).money), mRechargeList.get(position - 1).coin
+//                                ,mRechargeList.get(position - 1).id);
+//                    }
+//                }).create().show();
 
 
             }

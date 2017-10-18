@@ -487,7 +487,7 @@ public class VideoPlayerActivity extends ShowLiveActivityBase implements View.On
                             showToast3("请求连麦", 0);
                             mCameraPreview.setVisibility(View.VISIBLE);
                             mIvLoadingBl.setVisibility(View.GONE);
-                            mStreamer.getRtcClient().startCall(mRoomNum);
+//                            mStreamer.getRtcClient().startCall(mRoomNum);
                             isRequst = true;
                         }
                     }
@@ -512,7 +512,7 @@ public class VideoPlayerActivity extends ShowLiveActivityBase implements View.On
             case R.id.iv_stop_rtc:
                 if (mIsConnected) {
                     try {
-                        mStreamer.getRtcClient().stopCall();
+//                        mStreamer.getRtcClient().stopCall();
                         mRtcView.setVisibility(View.VISIBLE);
                     } catch (Exception e) {
 
@@ -562,7 +562,7 @@ public class VideoPlayerActivity extends ShowLiveActivityBase implements View.On
     }
 
     private void doUnRegister() {
-        mStreamer.getRtcClient().unRegisterRTC();
+//        mStreamer.getRtcClient().unRegisterRTC();
     }
 
     private void doAuthFailed() {
@@ -574,17 +574,17 @@ public class VideoPlayerActivity extends ShowLiveActivityBase implements View.On
         if (mCameraPreview != null)
             mCameraPreview.setVisibility(View.VISIBLE);
         mStreamer.setDisplayPreview(mCameraPreview);
-        mStreamer.setRTCSubScreenRect(0.65f, 0.1f, 0.35f, 0.3f,
-                RTCConstants.SCALING_MODE_CENTER_CROP);
-        mStreamer.getRtcClient().setRTCAuthInfo(RTC_AUTH_URI, authString,
-                mUser.id);
-        mStreamer.getRtcClient().setRTCUniqueName(RTC_UINIQUE_NAME);
-        mStreamer.setRTCMainScreen(RTCConstants.RTC_MAIN_SCREEN_REMOTE);
-        mStreamer.getRtcClient().openChattingRoom(false);
-        mStreamer.getRtcClient().setRTCResolutionScale(0.5f);
-        mStreamer.getRtcClient().setRTCFps(15);
-        mStreamer.getRtcClient().setRTCMode(0);
-        mStreamer.getRtcClient().registerRTC();
+//        mStreamer.setRTCSubScreenRect(0.65f, 0.1f, 0.35f, 0.3f,
+//                RTCConstants.SCALING_MODE_CENTER_CROP);
+//        mStreamer.getRtcClient().setRTCAuthInfo(RTC_AUTH_URI, authString,
+//                mUser.id);
+//        mStreamer.getRtcClient().setRTCUniqueName(RTC_UINIQUE_NAME);
+//        mStreamer.setRTCMainScreen(RTCConstants.RTC_MAIN_SCREEN_REMOTE);
+//        mStreamer.getRtcClient().openChattingRoom(false);
+//        mStreamer.getRtcClient().setRTCResolutionScale(0.5f);
+//        mStreamer.getRtcClient().setRTCFps(15);
+//        mStreamer.getRtcClient().setRTCMode(0);
+//        mStreamer.getRtcClient().registerRTC();
     }
 
     //请求连麦 成为辅播 推流
@@ -592,8 +592,8 @@ public class VideoPlayerActivity extends ShowLiveActivityBase implements View.On
         mStreamer = new LiveStream(this);
         mStreamer.startCameraPreview();
         mStreamer.setOnErrorListener(mOnErrorListener1);
-        mStreamer.getRtcClient().setRTCErrorListener(mRTCErrorListener);
-        mStreamer.getRtcClient().setRTCEventListener(mRTCEventListener);
+//        mStreamer.getRtcClient().setRTCErrorListener(mRTCErrorListener);
+//        mStreamer.getRtcClient().setRTCEventListener(mRTCEventListener);
         onRTCRegisterClick();
 
     }
@@ -608,7 +608,7 @@ public class VideoPlayerActivity extends ShowLiveActivityBase implements View.On
                             showToast3("请求连麦", 0);
                             mCameraPreview.setVisibility(View.VISIBLE);
                             mIvLoadingBl.setVisibility(View.GONE);
-                            mStreamer.getRtcClient().startCall(mRoomNum);
+//                            mStreamer.getRtcClient().startCall(mRoomNum);
                             isRequst = true;
                         }
                     } else {
@@ -681,7 +681,7 @@ public class VideoPlayerActivity extends ShowLiveActivityBase implements View.On
                     break;
                 case RTCClient.RTC_ERROR_REGISTED_FAILED:
                     Toast.makeText(VideoPlayerActivity.this, "注册失败", Toast.LENGTH_SHORT).show();
-                    mStreamer.getRtcClient().registerRTC();
+//                    mStreamer.getRtcClient().registerRTC();
                     break;
                 case RTCClient.RTC_ERROR_SERVER_ERROR:
                     isRequst = false;
@@ -1503,10 +1503,10 @@ public class VideoPlayerActivity extends ShowLiveActivityBase implements View.On
         super.onDestroy();
         videoPlayerEnd();
         if (mStreamer != null && mIsConnected) {
-            mStreamer.getRtcClient().stopCall();
+//            mStreamer.getRtcClient().stopCall();
         }
         if (mStreamer != null && mIsRegisted) {
-            mStreamer.getRtcClient().unRegisterRTC();
+//            mStreamer.getRtcClient().unRegisterRTC();
         }
         if (mStreamer != null) {
             mStreamer.release();

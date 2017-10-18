@@ -2,13 +2,17 @@ package com.ylive.phonelive.bean;
 
 import android.os.Parcel;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Administrator on 2016/4/13.
  */
 public class PrivateChatUserBean extends UserBean {
-
+    @SerializedName("lastMessage")
     public String lastMessage;
+    @SerializedName("unreadMessage")
     public boolean unreadMessage;
+    @SerializedName("isattention2")
     public int isattention2;
 
 

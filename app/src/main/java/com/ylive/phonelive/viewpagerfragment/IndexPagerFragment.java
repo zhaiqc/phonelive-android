@@ -17,6 +17,7 @@ import com.ylive.phonelive.R;
 import com.ylive.phonelive.adapter.ViewPageFragmentAdapter;
 import com.ylive.phonelive.base.BaseFragment;
 import com.ylive.phonelive.fragment.AttentionFragment;
+import com.ylive.phonelive.fragment.ChargeFragment;
 import com.ylive.phonelive.fragment.HotFragment;
 import com.ylive.phonelive.fragment.NewestFragment;
 import com.ylive.phonelive.interf.ListenMessage;
@@ -119,6 +120,7 @@ public class IndexPagerFragment extends BaseFragment implements ListenMessage {
         viewPageFragmentAdapter.addTab(getString(R.string.attention), "gz", AttentionFragment.class, getBundle());
         viewPageFragmentAdapter.addTab(getString(R.string.hot), "rm", HotFragment.class, getBundle());
         viewPageFragmentAdapter.addTab(getString(R.string.daren), "dr", NewestFragment.class, getBundle());
+        viewPageFragmentAdapter.addTab(getString(R.string.charge), "rm", ChargeFragment.class, getBundle());
 
 
         pager.setAdapter(viewPageFragmentAdapter);
@@ -153,7 +155,7 @@ public class IndexPagerFragment extends BaseFragment implements ListenMessage {
             @Override
             public void onPageSelected(int position) {
 
-                mRegion.setVisibility(3 == position ? View.VISIBLE : View.GONE);
+//                mRegion.setVisibility(3 == position ? View.VISIBLE : View.GONE);
 
             }
 

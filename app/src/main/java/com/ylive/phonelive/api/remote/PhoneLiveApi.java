@@ -117,6 +117,20 @@ public class PhoneLiveApi {
                 .execute(callback);
 
     }
+    /**
+     * @dw 获取收费
+     */
+    public static void getChargeUserList(StringCallback callback) {
+
+        //HHH 2016-09-09
+        OkHttpUtils.get()
+                .url(AppConfig.MAIN_URL_API)
+                .addParams("service", "Home.getCharge")
+                .tag("getCharge")
+                .build()
+                .execute(callback);
+
+    }
 
     /**
      * @dw 修改用户信息
