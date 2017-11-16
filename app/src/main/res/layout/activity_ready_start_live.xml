@@ -9,7 +9,7 @@
         android:paddingLeft="20dp"
         android:paddingTop="20dp"
         android:id="@+id/rl_start_live_bg"
-        android:background="@drawable/create_room_bg"
+        android:background="@drawable/bg1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -82,7 +82,7 @@
             android:orientation="vertical">
 
 
-           <com.ylive.phonelive.widget.BlackEditText
+           <com.jvtao.phonelive.widget.BlackEditText
                android:textSize="@dimen/text_size_25"
                 android:id="@+id/et_start_live_title"
                 android:gravity="center"
@@ -130,7 +130,7 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <com.ylive.phonelive.widget.BlackButton
+            <com.jvtao.phonelive.widget.BlackButton
                 android:id="@+id/btn_start_live"
                 android:textColor="@color/white"
                 android:background="@drawable/bg_start_live"

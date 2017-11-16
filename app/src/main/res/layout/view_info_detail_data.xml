@@ -10,7 +10,7 @@
         android:paddingRight="@dimen/space_18"
         android:paddingTop="@dimen/space_20">
 
-        <com.ylive.phonelive.widget.AvatarView
+        <com.jvtao.phonelive.widget.AvatarView
             android:id="@+id/iv_avatar"
             android:layout_width="55dp"
             android:layout_height="55dp"

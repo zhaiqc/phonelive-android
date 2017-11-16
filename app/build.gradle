@@ -6,9 +6,15 @@ android {
     signingConfigs {
         release {
             keyAlias 'phonelive'
-            keyPassword 'phonelive'
-            storeFile file('../yunbao.jks')
-            storePassword 'phonelive'
+            keyPassword '123456'
+            storeFile file('../jutao.jks')
+            storePassword '123456'
+        }
+        debug {
+            keyAlias 'phonelive'
+            keyPassword '123456'
+            storeFile file('D:/AndroidStudioProjects/phonelive-android/jutao.jks')
+            storePassword '123456'
         }
     }
     aaptOptions {
@@ -16,11 +22,11 @@ android {
         useNewCruncher=false
     }
     defaultConfig {
-        applicationId "com.yunbao.phonelive"
+        applicationId "com.jvtao.phonelive"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 3
-        versionName "2.1.16"
+        versionName "2.1.17"
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
@@ -31,7 +37,7 @@ android {
             shrinkResources true
         }
         debug {
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
     sourceSets {

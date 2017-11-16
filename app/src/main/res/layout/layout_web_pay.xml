@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.jvtao.phonelive.ui.customviews.ActivityTitle
+        android:id="@+id/activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/graywhite"
+        app:titleColor="@color/black"
+        app:titleText="@string/pay">
+
+    </com.jvtao.phonelive.ui.customviews.ActivityTitle>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+
+</LinearLayout>

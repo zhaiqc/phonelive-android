@@ -8,7 +8,7 @@
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="60dp">
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.jvtao.phonelive.widget.BlackTextView
             android:gravity="center_vertical"
             android:text="@string/livestartpush"
             android:layout_width="wrap_content"

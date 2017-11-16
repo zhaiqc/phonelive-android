@@ -22,13 +22,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight="5">
 
-                <com.ylive.phonelive.widget.AvatarView
+                <com.jvtao.phonelive.widget.AvatarView
                     android:id="@+id/iv_live_user_head"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center">
 
-                </com.ylive.phonelive.widget.AvatarView>
+                </com.jvtao.phonelive.widget.AvatarView>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
-                    <com.ylive.phonelive.widget.BlackTextView
+                    <com.jvtao.phonelive.widget.BlackTextView
                         android:id="@+id/tv_live_nick"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                             android:layout_height="15dp"
                             android:src="@drawable/live_map_dark" />
 
-                        <com.ylive.phonelive.widget.BlackTextView
+                        <com.jvtao.phonelive.widget.BlackTextView
                             android:id="@+id/tv_live_local"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -82,14 +82,14 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <com.ylive.phonelive.widget.BlackTextView
+                <com.jvtao.phonelive.widget.BlackTextView
                     android:id="@+id/tv_live_usernum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/global"
                     android:textSize="@dimen/text_size_20" />
 
-                <com.ylive.phonelive.widget.BlackTextView
+                <com.jvtao.phonelive.widget.BlackTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
@@ -103,7 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.ylive.phonelive.widget.LoadUrlImageView
+            <com.jvtao.phonelive.widget.LoadUrlImageView
                 android:id="@+id/iv_live_user_pic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -123,11 +123,21 @@
                 android:paddingLeft="6dp"
                 android:paddingRight="6dp"
                 android:paddingTop="5dp" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_label"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_width="35dp"
+                android:background="@drawable/charge_label"
+                android:layout_height="40dp"
+                android:orientation="horizontal"/>
         </RelativeLayout>
 
     </LinearLayout>
 
-    <com.ylive.phonelive.widget.BlackTextView
+    <com.jvtao.phonelive.widget.BlackTextView
         android:id="@+id/tv_hot_room_title"
         android:layout_width="match_parent"
         android:layout_height="40dp"

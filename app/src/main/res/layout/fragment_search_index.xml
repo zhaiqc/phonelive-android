@@ -18,7 +18,7 @@
             android:layout_toLeftOf="@+id/tv_search_btn"
             android:background="@drawable/bg_search_input">
 
-            <com.ylive.phonelive.widget.BlackEditText
+            <com.jvtao.phonelive.widget.BlackEditText
                 android:id="@+id/et_search_input"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -31,7 +31,7 @@
 
         </RelativeLayout>
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.jvtao.phonelive.widget.BlackTextView
             android:id="@+id/tv_search_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

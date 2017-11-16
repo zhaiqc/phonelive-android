@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <com.ylive.phonelive.widget.BlackTextView
+    <com.jvtao.phonelive.widget.BlackTextView
         android:layout_marginBottom="20dp"
         android:layout_above="@+id/ll_login_select"
         android:textSize="25dp"

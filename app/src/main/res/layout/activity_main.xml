@@ -18,7 +18,7 @@
     </LinearLayout>
 
 
-    <com.ylive.phonelive.widget.MyFragmentTabHost
+    <com.jvtao.phonelive.widget.MyFragmentTabHost
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:id="@android:id/tabhost"

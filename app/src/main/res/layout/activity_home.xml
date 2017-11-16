@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:weightSum="2">
-                <com.ylive.phonelive.widget.BlackTextView
+                <com.jvtao.phonelive.widget.BlackTextView
                     android:id="@+id/tv_home_page_index_btn"
                     android:textColor="@color/global"
                     android:gravity="center"
@@ -33,7 +33,7 @@
                     android:layout_gravity="center"
                     android:layout_height="20dp"
                     style="@style/v_line"/>
-                <com.ylive.phonelive.widget.BlackTextView
+                <com.jvtao.phonelive.widget.BlackTextView
                     android:textColor="@color/black"
                     android:id="@+id/tv_home_page_video_btn"
                     android:gravity="center"

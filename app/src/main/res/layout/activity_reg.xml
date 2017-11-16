@@ -5,7 +5,7 @@
     android:background="@color/main_background"
               xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.ylive.phonelive.ui.customviews.ActivityTitle
+    <com.jvtao.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/view_title"
         android:background="@color/white"
         app:titleColor="@color/black"
@@ -25,14 +25,14 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:orientation="horizontal">
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.jvtao.phonelive.widget.BlackTextView
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:text="账号"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"/>
-            <com.ylive.phonelive.widget.BlackEditText
+            <com.jvtao.phonelive.widget.BlackEditText
                 android:inputType="number"
                 android:id="@+id/et_loginphone"
                 android:textColorHint="#E2E2E5"
@@ -49,14 +49,14 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:orientation="horizontal">
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.jvtao.phonelive.widget.BlackTextView
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:text="验证码"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"/>
-            <com.ylive.phonelive.widget.BlackEditText
+            <com.jvtao.phonelive.widget.BlackEditText
                 android:id="@+id/et_logincode"
                 android:textColorHint="#E2E2E5"
                 android:background="@null"
@@ -81,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:orientation="horizontal">
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.jvtao.phonelive.widget.BlackTextView
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:text="密码"
@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"/>
 
-            <com.ylive.phonelive.widget.BlackEditText
+            <com.jvtao.phonelive.widget.BlackEditText
                 android:id="@+id/et_password"
                 android:textColorHint="#E2E2E5"
                 android:background="@null"
@@ -107,14 +107,14 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:orientation="horizontal">
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.jvtao.phonelive.widget.BlackTextView
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:text="确认密码"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"/>
-            <com.ylive.phonelive.widget.BlackEditText
+            <com.jvtao.phonelive.widget.BlackEditText
                 android:id="@+id/et_secondPassword"
                 android:textColorHint="#E2E2E5"
                 android:background="@null"
@@ -129,7 +129,7 @@
             style="@style/h_line"/>
     </LinearLayout>
 
-    <com.ylive.phonelive.widget.BlackButton
+    <com.jvtao.phonelive.widget.BlackButton
         android:id="@+id/btn_doReg"
         android:textColor="@color/white"
         android:layout_marginTop="20dp"

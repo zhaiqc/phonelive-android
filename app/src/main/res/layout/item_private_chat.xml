@@ -12,7 +12,7 @@
         android:layout_height="60dp"
         android:background="@color/white"
         >
-        <com.ylive.phonelive.widget.CircleImageView
+        <com.jvtao.phonelive.widget.CircleImageView
             android:layout_centerVertical="true"
             android:id="@+id/cv_userHead"
             android:layout_width="40dp"
