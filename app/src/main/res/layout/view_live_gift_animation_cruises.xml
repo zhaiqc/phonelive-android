@@ -32,7 +32,7 @@
                 android:src="@drawable/yacht_hull"
                 android:layout_width="300dp"
                 android:layout_height="200dp" />
-            <com.ylive.phonelive.widget.AvatarView
+            <com.jvtao.phonelive.widget.AvatarView
                 android:id="@+id/live_cruises_uhead"
                 android:layout_centerVertical="true"
                 android:src="@drawable/room_qq"

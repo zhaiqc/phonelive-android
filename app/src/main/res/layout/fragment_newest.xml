@@ -13,7 +13,7 @@
            android:layout_height="wrap_content"
            android:paddingBottom="50dp">
 
-           <com.ylive.phonelive.widget.HeaderGridView
+           <com.jvtao.phonelive.widget.HeaderGridView
                android:paddingTop="10dp"
                android:paddingLeft="10dp"
                android:paddingRight="10dp"
@@ -23,7 +23,7 @@
                android:horizontalSpacing="4dp"
                android:numColumns="2"
                android:verticalSpacing="4dp">
-           </com.ylive.phonelive.widget.HeaderGridView>
+           </com.jvtao.phonelive.widget.HeaderGridView>
 
        </android.support.v4.widget.SwipeRefreshLayout>
 
@@ -41,7 +41,7 @@
                android:layout_gravity="center_vertical"
                android:src="@drawable/buzai" />
 
-           <com.ylive.phonelive.widget.BlackTextView
+           <com.jvtao.phonelive.widget.BlackTextView
                android:layout_width="wrap_content"
                android:layout_height="match_parent"
                android:layout_gravity="center_horizontal"
@@ -51,7 +51,7 @@
                android:textColor="@color/black"
                android:textSize="@dimen/text_size_20" />
 
-           <com.ylive.phonelive.widget.BlackTextView
+           <com.jvtao.phonelive.widget.BlackTextView
                android:layout_width="wrap_content"
                android:layout_height="match_parent"
                android:layout_gravity="center_horizontal"
@@ -75,7 +75,7 @@
                android:layout_gravity="center_vertical"
                android:src="@drawable/shibai" />
 
-           <com.ylive.phonelive.widget.BlackTextView
+           <com.jvtao.phonelive.widget.BlackTextView
                android:layout_width="wrap_content"
                android:layout_height="match_parent"
                android:layout_gravity="center_horizontal"
@@ -85,7 +85,7 @@
                android:textColor="@color/black"
                android:textSize="@dimen/text_size_20" />
 
-           <com.ylive.phonelive.widget.BlackTextView
+           <com.jvtao.phonelive.widget.BlackTextView
                android:layout_width="wrap_content"
                android:layout_height="match_parent"
                android:layout_gravity="center_horizontal"

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:paddingTop="70dp">
     <!--头像-->
-   <com.ylive.phonelive.widget.AvatarView
+   <com.jvtao.phonelive.widget.AvatarView
        android:layout_centerHorizontal="true"
         android:id="@+id/iv_animation_head"
         android:layout_width="40dp"

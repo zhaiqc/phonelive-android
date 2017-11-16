@@ -6,7 +6,7 @@
     android:background="@color/white"
     android:orientation="vertical"
               xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.ylive.phonelive.ui.customviews.ActivityTitle
+    <com.jvtao.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/view_title"
         app:titleColor="@color/black"
         android:layout_width="match_parent"

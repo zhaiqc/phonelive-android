@@ -23,7 +23,7 @@
         android:layout_alignParentRight="true"
        >
 
-        <com.ylive.phonelive.widget.AvatarView
+        <com.jvtao.phonelive.widget.AvatarView
             android:id="@+id/av_message_head"
             android:layout_width="35dp"
             android:layout_height="35dp"

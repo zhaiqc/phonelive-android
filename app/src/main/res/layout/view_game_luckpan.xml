@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         >
 
-        <com.ylive.phonelive.game.LuckPan
+        <com.jvtao.phonelive.game.LuckPan
             android:id="@+id/luck_pan"
             android:layout_width="500dp"
             android:layout_height="500dp"

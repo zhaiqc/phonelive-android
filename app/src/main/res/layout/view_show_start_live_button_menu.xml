@@ -99,7 +99,7 @@
 
         </RelativeLayout>
 
-        <com.ylive.phonelive.game.LucklyPanLayout
+        <com.jvtao.phonelive.game.LucklyPanLayout
             android:id="@+id/pl_panpokers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
             android:layout_centerHorizontal="true"
             android:visibility="gone">
 
-        </com.ylive.phonelive.game.LucklyPanLayout>
+        </com.jvtao.phonelive.game.LucklyPanLayout>
 
         <LinearLayout
             android:id="@+id/ll_live_chat_edit"
@@ -118,14 +118,14 @@
             android:orientation="horizontal"
             android:visibility="gone">
 
-            <com.ylive.phonelive.widget.BlackButton
+            <com.jvtao.phonelive.widget.BlackButton
                 android:id="@+id/tglbtn_danmu_setting"
                 android:layout_width="60dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="7dp"
                 android:background="@drawable/tglbtn_live_danmu_setting" />
 
-            <com.ylive.phonelive.widget.BlackEditText
+            <com.jvtao.phonelive.widget.BlackEditText
                 android:id="@+id/et_live_chat_input"
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
@@ -138,7 +138,7 @@
                 android:textColor="@color/gray"
                 android:textSize="@dimen/text_size_12" />
 
-            <com.ylive.phonelive.widget.BlackButton
+            <com.jvtao.phonelive.widget.BlackButton
                 android:id="@+id/bt_send_chat"
                 android:layout_width="70dp"
                 android:layout_height="match_parent"

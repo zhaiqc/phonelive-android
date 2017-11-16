@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">YLVideoPlayer</string>
+    <string name="app_name">VideoPlayer</string>
 
     <string name="dlna_device_title">"%s"正在播放中</string>
 </resources>
