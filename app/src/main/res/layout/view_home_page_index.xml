@@ -22,19 +22,19 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <com.jvtao.phonelive.widget.AvatarView
+                <com.shenlive.phonelive.widget.AvatarView
                     android:id="@+id/av_home_page_order1"
                     android:layout_marginRight="10dp"
                     android:layout_centerVertical="true"
                     android:layout_width="40dp"
                     android:layout_height="40dp" />
-                <com.jvtao.phonelive.widget.AvatarView
+                <com.shenlive.phonelive.widget.AvatarView
                     android:id="@+id/av_home_page_order2"
                     android:layout_marginRight="10dp"
                     android:layout_centerVertical="true"
                     android:layout_width="40dp"
                     android:layout_height="40dp" />
-                <com.jvtao.phonelive.widget.AvatarView
+                <com.shenlive.phonelive.widget.AvatarView
                     android:id="@+id/av_home_page_order3"
                     android:layout_marginRight="10dp"
                     android:layout_centerVertical="true"
@@ -61,10 +61,10 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="70dp">
-                <com.jvtao.phonelive.widget.BlackTextView
+                <com.shenlive.phonelive.widget.BlackTextView
                     android:text="@string/number"
                     style="@style/home_user_info_item_labe"/>
-                <com.jvtao.phonelive.widget.BlackTextView
+                <com.shenlive.phonelive.widget.BlackTextView
                     android:id="@+id/tv_home_page_num"
                     style="@style/home_user_info_item_content"
                     />
@@ -79,11 +79,11 @@
                 android:padding="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="70dp">
-                <com.jvtao.phonelive.widget.BlackTextView
+                <com.shenlive.phonelive.widget.BlackTextView
                     style="@style/home_user_info_item_labe"
                     android:text="@string/sign"
                     />
-                <com.jvtao.phonelive.widget.BlackTextView
+                <com.shenlive.phonelive.widget.BlackTextView
                     android:id="@+id/tv_home_page_sign2"
                     style="@style/home_user_info_item_content"
                    />

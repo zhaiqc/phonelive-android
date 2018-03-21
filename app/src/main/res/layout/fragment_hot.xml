@@ -35,7 +35,7 @@
                 android:src="@drawable/home_icn_drop_down"
                 android:visibility="gone" />
 
-            <com.jvtao.phonelive.widget.PagerSlidingTabStrip
+            <com.shenlive.phonelive.widget.PagerSlidingTabStrip
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"

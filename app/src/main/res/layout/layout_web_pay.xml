@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <com.jvtao.phonelive.ui.customviews.ActivityTitle
+    <com.shenlive.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/activity_title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -13,7 +13,7 @@
         app:titleColor="@color/black"
         app:titleText="@string/pay">
 
-    </com.jvtao.phonelive.ui.customviews.ActivityTitle>
+    </com.shenlive.phonelive.ui.customviews.ActivityTitle>
 
     <WebView
         android:id="@+id/webView"

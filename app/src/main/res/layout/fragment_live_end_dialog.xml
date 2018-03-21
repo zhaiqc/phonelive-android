@@ -22,10 +22,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="50dp">
-            <com.jvtao.phonelive.widget.BlackButton
+            <com.shenlive.phonelive.widget.BlackButton
                 android:id="@+id/btn_follow"
                 style="@style/live_show_end_btn"/>
-            <com.jvtao.phonelive.widget.BlackButton
+            <com.shenlive.phonelive.widget.BlackButton
                 android:id="@+id/btn_back_index"
                 style="@style/live_show_end_btn"
                 android:text="@string/gobackindex"

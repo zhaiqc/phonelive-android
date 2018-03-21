@@ -7,7 +7,7 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <com.jvtao.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_order_item_u_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -24,7 +24,7 @@
             android:layout_height="15dp" />
     </LinearLayout>
     <!--贡献值-->
-    <com.jvtao.phonelive.widget.BlackTextView
+    <com.shenlive.phonelive.widget.BlackTextView
         android:id="@+id/tv_order_item_u_gx"
         android:layout_gravity="center"
         android:text=""

@@ -290,7 +290,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="55dp">
 
-            <com.jvtao.phonelive.widget.AvatarView
+            <com.shenlive.phonelive.widget.AvatarView
                 app:border_color="@color/global"
                 app:border_width="1dp"
                 android:id="@+id/av_show_dialog_u_head"

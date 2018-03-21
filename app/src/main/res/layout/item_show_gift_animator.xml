@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <!--用户头像-->
-            <com.jvtao.phonelive.widget.AvatarView
+            <com.shenlive.phonelive.widget.AvatarView
                 app:border_width="1dp"
                 app:border_color="@color/global"
                 android:id="@+id/av_gift_uhead"
@@ -47,7 +47,7 @@
 
         </LinearLayout>
         <!--礼物图片-->
-        <com.jvtao.phonelive.widget.AvatarView
+        <com.shenlive.phonelive.widget.AvatarView
             android:id="@+id/av_gift_icon"
             android:layout_marginLeft="-40dp"
             android:src="@drawable/icon_def_phone"

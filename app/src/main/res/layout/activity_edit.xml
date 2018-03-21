@@ -6,7 +6,7 @@
               xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <com.jvtao.phonelive.ui.customviews.ActivityTitle
+    <com.shenlive.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/view_title"
         android:background="@color/graywhite"
         app:titleColor="@color/black"
@@ -21,7 +21,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center">
 
-        <com.jvtao.phonelive.widget.BlackEditText
+        <com.shenlive.phonelive.widget.BlackEditText
             android:background="@null"
             android:paddingLeft="5dp"
             android:minEms="1"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/icon_cancel"/>
     </RelativeLayout>
-    <com.jvtao.phonelive.widget.BlackTextView
+    <com.shenlive.phonelive.widget.BlackTextView
         android:textSize="15dp"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
@@ -46,7 +46,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content" />
 
-    <com.jvtao.phonelive.widget.BlackButton
+    <com.shenlive.phonelive.widget.BlackButton
         android:layout_marginTop="20dp"
         android:id="@+id/btn_edit_save"
         android:textSize="@dimen/text_size_17"

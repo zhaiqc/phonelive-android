@@ -21,7 +21,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
-                <com.jvtao.phonelive.widget.CircleImageView
+                <com.shenlive.phonelive.widget.CircleImageView
                     android:id="@+id/ci_order_item_u_head"
                     android:layout_centerHorizontal="true"
                     android:layout_width="39dp"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jvtao.phonlive">
+    package="com.shenlive.phonlive">
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.RESTART_PACKAGES" />
@@ -36,7 +36,7 @@
     <!-- jpush -->
     <!-- Required -->
     <permission
-        android:name="com.jvtao.phonelive.permission.JPUSH_MESSAGE"
+        android:name="com.shenlive.phonelive.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
     <!-- Required -->
@@ -67,13 +67,13 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name="com.jvtao.phonelive.AppContext"
+        android:name="com.shenlive.phonelive.AppContext"
         android:allowBackup="true"
-        android:icon="@mipmap/ml_icon"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.jvtao.phonelive.AppStart"
+            android:name="com.shenlive.phonelive.AppStart"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -105,136 +105,136 @@
         </receiver>
 
         <activity
-            android:name="com.jvtao.phonelive.ui.MainActivity"
+            android:name="com.shenlive.phonelive.ui.MainActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="使用手机号登录"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.PhoneLoginActivity"
+            android:name="com.shenlive.phonelive.ui.PhoneLoginActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="使用手机号登录"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.PhoneRegActivity"
+            android:name="com.shenlive.phonelive.ui.PhoneRegActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="注册"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.PhoneFindPassActivity"
+            android:name="com.shenlive.phonelive.ui.PhoneFindPassActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="找回密码"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.LiveLoginSelectActivity"
+            android:name="com.shenlive.phonelive.ui.LiveLoginSelectActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="登陆选择"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.UserInfoDetailActivity"
+            android:name="com.shenlive.phonelive.ui.UserInfoDetailActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="用户信息详情"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.EditInfoActivity"
+            android:name="com.shenlive.phonelive.ui.EditInfoActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="编辑资料"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.WebPayActivity"
+            android:name="com.shenlive.phonelive.ui.WebPayActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="网页支付"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.UserSelectAvatarActivity"
+            android:name="com.shenlive.phonelive.ui.UserSelectAvatarActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="上传封面头像"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.UserLevelActivity"
+            android:name="com.shenlive.phonelive.ui.UserLevelActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="等级"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.UserDiamondsActivity"
+            android:name="com.shenlive.phonelive.ui.UserDiamondsActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="钻石"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.UserProfitActivity"
+            android:name="com.shenlive.phonelive.ui.UserProfitActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="收益"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.SettingActivity"
+            android:name="com.shenlive.phonelive.ui.SettingActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="设置"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.WebViewActivity"
+            android:name="com.shenlive.phonelive.ui.WebViewActivity"
             android:configChanges="keyboardHidden|orientation"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name="com.jvtao.phonelive.ui.StartLiveActivity"
+            android:name="com.shenlive.phonelive.ui.StartLiveActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="直播"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.jvtao.phonelive.ui.VideoPlayerActivity"
+            android:name="com.shenlive.phonelive.ui.VideoPlayerActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="看直播"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.jvtao.phonelive.ui.HomePageActivity"
+            android:name="com.shenlive.phonelive.ui.HomePageActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="主页"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.FansActivity"
+            android:name="com.shenlive.phonelive.ui.FansActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="粉丝列表"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.AttentionActivity"
+            android:name="com.shenlive.phonelive.ui.AttentionActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="关注列表"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.DedicateOrderActivity"
+            android:name="com.shenlive.phonelive.ui.DedicateOrderActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="魅力值贡献榜单"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.LiveRecordActivity"
+            android:name="com.shenlive.phonelive.ui.LiveRecordActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="直播记录"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.UserChangeSexActivity"
+            android:name="com.shenlive.phonelive.ui.UserChangeSexActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="修改性别"
             android:screenOrientation="portrait" />
-        <activity android:name="com.jvtao.phonelive.ui.VideoBackActivity" />
-        <activity android:name="com.jvtao.phonelive.ui.ReadyStartLiveActivity" />
+        <activity android:name="com.shenlive.phonelive.ui.VideoBackActivity" />
+        <activity android:name="com.shenlive.phonelive.ui.ReadyStartLiveActivity" />
         <!--<activity android:name=".ui.ExchangeVoteActivity" />-->
-        <activity android:name="com.jvtao.phonelive.ui.SplashActivity" />
-        <activity android:name="com.jvtao.phonelive.ui.PhoneChangePassActivity" />
-        <activity android:name="com.jvtao.phonelive.ui.RequestCashActivity" />
+        <activity android:name="com.shenlive.phonelive.ui.SplashActivity" />
+        <activity android:name="com.shenlive.phonelive.ui.PhoneChangePassActivity" />
+        <activity android:name="com.shenlive.phonelive.ui.RequestCashActivity" />
         <activity
-            android:name="com.jvtao.phonelive.ui.SimpleBackActivity"
+            android:name="com.shenlive.phonelive.ui.SimpleBackActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.ActionBarSimpleBackActivity"
+            android:name="com.shenlive.phonelive.ui.ActionBarSimpleBackActivity"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.jvtao.phonelive.ui.AlipayResultActivity"
+            android:name="com.shenlive.phonelive.ui.AlipayResultActivity"
             android:configChanges="orientation|screenSize"
             android:windowSoftInputMode="adjustResize|adjustPan" />
         <activity
@@ -270,7 +270,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.jvtao.phonelive.wxapi.WXEntryActivity"
+            android:name="com.shenlive.phonelive.wxapi.WXEntryActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Light.NoTitleBar" />
@@ -347,7 +347,7 @@
 
         <!-- User defined. 用户自定义的广播接收器 -->
         <receiver
-            android:name="com.jvtao.phonelive.broadcast.PushReceiver"
+            android:name="com.shenlive.phonelive.broadcast.PushReceiver"
             android:enabled="true">
             <intent-filter>
 
@@ -414,7 +414,7 @@
             android:name="BUGLY_ENABLE_DEBUG"
             android:value="true" />
 
-        <activity android:name="com.jvtao.phonelive.ui.OrderWebViewActivity"></activity>
+        <activity android:name="com.shenlive.phonelive.ui.OrderWebViewActivity"></activity>
     </application>
 
 </manifest>

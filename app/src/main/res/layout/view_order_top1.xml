@@ -22,7 +22,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
-                <com.jvtao.phonelive.widget.CircleImageView
+                <com.shenlive.phonelive.widget.CircleImageView
                     android:layout_marginTop="19dp"
                     android:id="@+id/ci_order_item_u_head"
                     android:layout_centerHorizontal="true"

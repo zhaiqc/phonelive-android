@@ -10,13 +10,13 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:visibility="gone"/>
-    <com.jvtao.phonelive.widget.LoadUrlImageView
+    <com.shenlive.phonelive.widget.LoadUrlImageView
         android:background="@color/black"
         android:id="@+id/iv_live_look_loading_bl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"/>
-    <com.jvtao.phonelive.widget.VideoSurfaceView
+    <com.shenlive.phonelive.widget.VideoSurfaceView
         android:id="@+id/video_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <!--加载背景图-->
-        <com.jvtao.phonelive.widget.LoadUrlImageView
+        <com.shenlive.phonelive.widget.LoadUrlImageView
             android:id="@+id/iv_live_look_loading_bg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

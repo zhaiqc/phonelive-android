@@ -10,7 +10,7 @@
         android:background="@color/global"
         android:layout_width="match_parent"
         android:layout_height="50dp">
-        <com.jvtao.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:textSize="@dimen/text_size_20"
             android:layout_centerVertical="true"
             android:layout_marginLeft="30dp"

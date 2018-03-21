@@ -28,7 +28,7 @@
                     android:layout_height="20dp"
                     android:src="@drawable/me_under_myaccount" />
 
-                <com.jvtao.phonelive.widget.BlackTextView
+                <com.shenlive.phonelive.widget.BlackTextView
                     android:id="@+id/tv_diamondsnum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -38,14 +38,14 @@
 
             </LinearLayout>
 
-            <com.jvtao.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:id="@+id/tv_price_explain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black" />
         </LinearLayout>
 
-        <com.jvtao.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/bt_preice_text"
             android:layout_width="100dp"
             android:layout_height="35dp"

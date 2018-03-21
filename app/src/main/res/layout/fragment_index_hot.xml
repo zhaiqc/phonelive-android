@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <com.jvtao.phonelive.widget.WPSwipeRefreshLayout
+        <com.shenlive.phonelive.widget.WPSwipeRefreshLayout
             android:id="@+id/refreshLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,7 +21,7 @@
                 android:divider="@null"
                 android:scrollbars="none" />
 
-        </com.jvtao.phonelive.widget.WPSwipeRefreshLayout>
+        </com.shenlive.phonelive.widget.WPSwipeRefreshLayout>
 
         <LinearLayout
             android:id="@+id/fensi"
@@ -37,7 +37,7 @@
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/buzai" />
 
-            <com.jvtao.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
@@ -47,7 +47,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_20" />
 
-            <com.jvtao.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
@@ -71,7 +71,7 @@
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/shibai" />
 
-            <com.jvtao.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
@@ -81,7 +81,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_20" />
 
-            <com.jvtao.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"

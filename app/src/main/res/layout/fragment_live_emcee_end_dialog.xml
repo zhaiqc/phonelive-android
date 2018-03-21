@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <com.jvtao.phonelive.widget.AvatarView
+            <com.shenlive.phonelive.widget.AvatarView
                 app:border_color="@color/global"
                 app:border_width="2dp"
                 android:id="@+id/av_user_head"
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <com.jvtao.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:layout_marginTop="10dp"
                 android:textColor="@color/global"
                 android:textSize="@dimen/text_size_25"
@@ -54,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <com.jvtao.phonelive.widget.BlackTextView
+                <com.shenlive.phonelive.widget.BlackTextView
                     android:textSize="@dimen/text_size_15"
                     android:layout_marginTop="10dp"
                     android:text="0"
@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <com.jvtao.phonelive.widget.BlackTextView
+                <com.shenlive.phonelive.widget.BlackTextView
                     android:textSize="@dimen/text_size_15"
                     android:layout_marginTop="10dp"
                     android:id="@+id/tv_live_duration"
@@ -112,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <com.jvtao.phonelive.widget.BlackTextView
+                <com.shenlive.phonelive.widget.BlackTextView
                     android:textSize="@dimen/text_size_15"
                     android:layout_marginTop="10dp"
                     android:text="0"
@@ -131,7 +131,7 @@
 
 
         </LinearLayout>
-        <com.jvtao.phonelive.widget.BlackButton
+        <com.shenlive.phonelive.widget.BlackButton
             android:layout_marginBottom="140dp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
