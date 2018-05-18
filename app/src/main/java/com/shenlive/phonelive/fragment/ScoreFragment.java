@@ -88,7 +88,7 @@ public class ScoreFragment extends BaseFragment implements SwipeRefreshLayout.On
                     Toast.makeText(getContext(), "请登录..", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                VideoPlayerActivity.startVideoPlayerActivity(getContext(), mUserList.get(position - 1));
+                VideoPlayerActivity.startVideoPlayerActivity(getContext(), mUserList.get(position));
             }
 
         });

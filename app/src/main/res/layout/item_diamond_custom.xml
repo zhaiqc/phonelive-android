@@ -54,7 +54,7 @@
             <com.shenlive.phonelive.widget.BlackButton
                 android:padding="5dp"
                 android:id="@+id/btn_buy_diamond"
-                android:textSize="@dimen/text_size_17"
+                android:textSize="@dimen/text_size_16"
                 android:text="@string/immediately_pay"
                 android:layout_gravity="center"
                 android:background="@drawable/btn_common"

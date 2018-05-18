@@ -13,7 +13,7 @@ public class MyFragmentTabHost extends FragmentTabHost {
 	
 	private String mCurrentTag;
 	
-	private String mNoTabChangedTag = "1";
+	private String mNoTabChangedTag = "2";
 	private Context context;
 	//public  boolean isStartingLive;
 	//public int clickNum=0;

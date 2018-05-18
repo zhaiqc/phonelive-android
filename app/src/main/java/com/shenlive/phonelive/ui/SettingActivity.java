@@ -1,10 +1,14 @@
 package com.shenlive.phonelive.ui;
 
+import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 import com.shenlive.phonelive.AppConfig;
 import com.shenlive.phonelive.AppContext;
 
+import com.shenlive.phonelive.api.remote.PhoneLiveApi;
 import com.shenlive.phonelive.base.ToolBarBaseActivity;
 import com.shenlive.phonelive.ui.customviews.ActivityTitle;
 import com.shenlive.phonelive.ui.customviews.LineControllerView;
@@ -13,11 +17,13 @@ import com.shenlive.phonelive.utils.TDevice;
 import com.shenlive.phonelive.utils.UIHelper;
 import com.shenlive.phonelive.utils.UpdateManager;
 import com.shenlive.phonlive.R;
+import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.util.Locale;
 
 import butterknife.InjectView;
 import butterknife.OnClick;
+import okhttp3.Call;
 
 /**
  * 设置
@@ -30,7 +36,8 @@ public class SettingActivity extends ToolBarBaseActivity {
 
     @InjectView(R.id.view_title)
     ActivityTitle mActivityTitle;
-
+    @InjectView(R.id.switch_btn)
+    Switch mSwich;
     @Override
     protected int getLayoutId() {
         return R.layout.activity_setting;
@@ -38,6 +45,41 @@ public class SettingActivity extends ToolBarBaseActivity {
 
     @Override
     public void initView() {
+        Log.d("settingyinsi",AppContext.getInstance().getLoginUser().yinsi );
+        if(AppContext.getInstance().getLoginUser().yinsi.equals("1")){
+            mSwich.setChecked(true);
+
+        }else if (AppContext.getInstance().getLoginUser().yinsi.equals("0")){
+            mSwich.setChecked(false);
+        }
+
+        mSwich.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            StringCallback callback =new StringCallback() {
+                @Override
+                public void onError(Call call, Exception e, int id) {
+
+                }
+
+                @Override
+                public void onResponse(String response, int id) {
+
+                }
+            };
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+//                    mText.setText("开启");
+                    PhoneLiveApi.getPrivacy(AppContext.getInstance().getLoginUid(),AppContext.getInstance().getToken(),"1",callback);
+//                    AppContext.getInstance().getLoginUser().yinsi="1";
+                }else {
+//                    mText.setText("关闭");
+                    PhoneLiveApi.getPrivacy(AppContext.getInstance().getLoginUid(),AppContext.getInstance().getToken(),"0",callback);
+//                    AppContext.getInstance().getLoginUser().yinsi="0";
+
+                }
+            }
+        });
         mActivityTitle.setReturnListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,6 +131,10 @@ public class SettingActivity extends ToolBarBaseActivity {
             case R.id.ll_check_update:
                 checkNewVersion();
                 break;
+//            case R.id.switch_btn:
+//
+//
+//                break;
         }
     }
 

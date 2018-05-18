@@ -88,7 +88,7 @@ public class AppStart extends Activity {
 
         if(!AppContext.getInstance().isLogin()){
 
-            UIHelper.showLoginSelectActivity(this);
+            UIHelper.showCodeLogin(this);
             finish();
             return;
         }
@@ -102,9 +102,7 @@ public class AppStart extends Activity {
 
     int checkAPP(Context context) {
         try {
-            PackageInfo packageInfo = context.getPackageManager()
-                    .getPackageInfo(context.getPackageName(),
-                            PackageManager.GET_SIGNATURES);
+            PackageInfo packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
             Signature[] signs = packageInfo.signatures;
             Signature sign = signs[0];
 

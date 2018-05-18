@@ -38,7 +38,7 @@
         <com.shenlive.phonelive.widget.BlackTextView
             android:textColor="@color/gray"
             android:id="@+id/tv_item_usign"
-            android:textSize="@dimen/text_size_10"
+            android:textSize="@dimen/text_size_8"
             android:text=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

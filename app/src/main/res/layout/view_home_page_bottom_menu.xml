@@ -22,7 +22,7 @@
                     android:layout_height="15dp"
                     android:src="@drawable/sixinfollow"/>
                 <com.shenlive.phonelive.widget.BlackTextView
-                    android:textSize="@dimen/text_size_15"
+                    android:textSize="@dimen/text_size_13"
                     android:id="@+id/tv_home_page_menu_follow"
                     android:layout_marginLeft="5dp"
                     android:text="@string/already_follow"
@@ -44,7 +44,7 @@
                     android:src="@drawable/icon_home_follow"/>
                 <com.shenlive.phonelive.widget.BlackTextView
                     android:textColor="@color/global"
-                    android:textSize="@dimen/text_size_15"
+                    android:textSize="@dimen/text_size_13"
                     android:layout_marginLeft="5dp"
                     android:text="@string/privatechat"
                     android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
                 <com.shenlive.phonelive.widget.BlackTextView
                     android:textColor="@color/global"
                     android:id="@+id/tv_home_page_black_state"
-                    android:textSize="@dimen/text_size_15"
+                    android:textSize="@dimen/text_size_13"
                     android:layout_marginLeft="5dp"
                     android:text="@string/lahei"
                     android:layout_width="wrap_content"

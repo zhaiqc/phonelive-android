@@ -28,7 +28,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/space_4"
             android:text="@string/head"
-            android:textSize="@dimen/text_size_16" />
+            android:textSize="@dimen/text_size_15" />
 
         <com.shenlive.phonelive.widget.AvatarView
             android:id="@+id/av_userHead"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/space_4"
             android:text="@string/nick_name"
-            android:textSize="@dimen/text_size_16" />
+            android:textSize="@dimen/text_size_15" />
 
         <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_userNick"
@@ -73,7 +73,7 @@
             android:layout_marginRight="20dp"
             android:ellipsize="end"
             android:singleLine="true"
-            android:textSize="@dimen/text_size_16" />
+            android:textSize="@dimen/text_size_15" />
 
         <ImageView
             android:id="@+id/iv_nick2"
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/space_4"
             android:text="签名"
-            android:textSize="@dimen/text_size_16" />
+            android:textSize="@dimen/text_size_15" />
 
         <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_userSign"

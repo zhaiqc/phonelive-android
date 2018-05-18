@@ -1,7 +1,11 @@
 package com.shenlive.phonelive.em;
 
 
+import com.shenlive.phonelive.fragment.AttentionFragment;
+import com.shenlive.phonelive.fragment.FindFragment;
+import com.shenlive.phonelive.fragment.FollowFragment;
 import com.shenlive.phonelive.fragment.UserInformationFragment;
+import com.shenlive.phonelive.fragment.myFindFragment;
 import com.shenlive.phonelive.ui.StartLiveActivity;
 import com.shenlive.phonelive.viewpagerfragment.IndexPagerFragment;
 import com.shenlive.phonlive.R;
@@ -10,9 +14,11 @@ import com.shenlive.phonlive.R;
  * Created by Administrator on 2016/3/9.
  */
 public enum  MainTab {
-    INDEX(0, R.drawable.btn_tab_hot_background,0, IndexPagerFragment.class),
-    LIVE(1, R.drawable.btn_tab_live_background,1, StartLiveActivity.class),
-    HOME(2, R.drawable.btn_tab_home_background,2, UserInformationFragment.class);
+    LIVE(0, R.drawable.btn_tab_hot_background,0, IndexPagerFragment.class),
+    FOLLOW(1, R.drawable.btn_tab_follow_background,1, AttentionFragment.class),
+    STAR_LIVE(2, R.drawable.btn_tab_live_background,2, StartLiveActivity.class),
+    FIND(3, R.drawable.btn_tab_find_background,3, FindFragment.class),
+    MY(4, R.drawable.btn_tab_home_background,4, UserInformationFragment.class);
     private int idx;
     private int resName;
     private int resIcon;

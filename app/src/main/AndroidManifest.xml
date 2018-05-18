@@ -109,6 +109,10 @@
             android:configChanges="keyboardHidden|orientation"
             android:label="使用手机号登录"
             android:screenOrientation="portrait" />
+        <activity android:name="com.shenlive.phonelive.ui.CodeLoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="使用验证码登录"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.shenlive.phonelive.ui.PhoneLoginActivity"
             android:configChanges="keyboardHidden|orientation"

@@ -146,6 +146,7 @@ public class IndexPagerFragment extends BaseFragment implements ListenMessage {
         tabs.setUnderlineColor(getResources().getColor(R.color.white));
         tabs.setDividerColor(getResources().getColor(R.color.white));
         tabs.setTextColor(Color.BLACK);
+        tabs.setTextSize(35);
         tabs.setTabPaddingLeftRight(10);
         tabs.setSelectedTextColor(getResources().getColor(R.color.global));
         tabs.setIndicatorHeight(4);

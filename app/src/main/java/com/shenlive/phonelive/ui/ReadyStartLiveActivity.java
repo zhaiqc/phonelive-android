@@ -14,7 +14,9 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,6 +64,7 @@ import butterknife.OnClick;
 import okhttp3.Call;
 
 public class ReadyStartLiveActivity extends ToolBarBaseActivity {
+    Dialog dialog;
     //填写直播标题
     @InjectView(R.id.et_start_live_title)
     BlackEditText mStartLiveTitle;
@@ -115,8 +118,7 @@ public class ReadyStartLiveActivity extends ToolBarBaseActivity {
     private final static int CROP = 400;
 
     private final static String FILE_SAVEPATH = Environment
-            .getExternalStorageDirectory().getAbsolutePath()
-            + "/PhoneLive/Portrait/";
+            .getExternalStorageDirectory().getAbsolutePath() + "/PhoneLive/Portrait/";
     private Uri origUri;
     private Uri cropUri;
     private File protraitFile;
@@ -345,6 +347,7 @@ public class ReadyStartLiveActivity extends ToolBarBaseActivity {
      */
     private void createRoom() {
         if (shareType != 7) {
+            setIntroduce();
             ShareUtils.share(ReadyStartLiveActivity.this, shareType, mUser, null);
         } else {
             readyStart();
@@ -364,12 +367,7 @@ public class ReadyStartLiveActivity extends ToolBarBaseActivity {
             return;
         }
         //请求服务端
-        PhoneLiveApi.createLive(mUser.id, mUser.avatar, mUser.avatar_thumb,
-                StringUtils.getNewString(mStartLiveTitle.getText().toString()), mUser.token,
-                mUser.user_nicename,
-                protraitFile,
-                type,
-                type_val,
+        PhoneLiveApi.createLive(mUser.id, mUser.avatar, mUser.avatar_thumb, StringUtils.getNewString(mStartLiveTitle.getText().toString()), mUser.token, mUser.user_nicename, protraitFile, type, type_val,
                 new StringCallback() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
@@ -378,7 +376,12 @@ public class ReadyStartLiveActivity extends ToolBarBaseActivity {
 
                     @Override
                     public void onResponse(String s, int id) {
+                        Log.d("startliveCallback",s );
+                        Log.d("startliveCallback: ",AppContext.lat );
+                        Log.d("startliveCallback: ",AppContext.lng );
                         JSONArray res = ApiUtils.checkIsSuccess(s);
+                        Log.d("startliveCallback: ", String.valueOf(res));
+
                         if (res != null) {
                             try {
                                 JSONObject data = res.getJSONObject(0);
@@ -591,5 +594,52 @@ public class ReadyStartLiveActivity extends ToolBarBaseActivity {
 
     }
 
+    private void setIntroduce() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LinearLayout linearLayout =new LinearLayout(this);
+        LinearLayout.LayoutParams layoutParams=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        linearLayout.setLayoutParams(layoutParams);
+
+        final EditText editText =new EditText(this);
+
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        layoutParams.setMargins(10,10,10,10);
+
+        editText.setLayoutParams(lp);
+
+
+        linearLayout.addView(editText);
+        builder.setTitle("填写标题");
+        builder.setView(linearLayout);
+
+
+        builder.setNegativeButton("取消", new android.content.DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(android.content.DialogInterface dialogInterface, int i) {
+                ShareUtils.share(ReadyStartLiveActivity.this, shareType, mUser, null);
+
+            }
+        });
+        builder.setPositiveButton("确定", new android.content.DialogInterface.OnClickListener() {
+             String introduce =editText.getText().toString();
+            @Override
+            public void onClick(android.content.DialogInterface dialogInterface, int i) {
+                if (introduce !="") {
+                    //upDataApp(apiUrl);
+                    ShareUtils.share(ReadyStartLiveActivity.this, shareType, mUser,editText.getText().toString(), null);
+                }else {
+                    ShareUtils.share(ReadyStartLiveActivity.this, shareType, mUser, null);
+                }
+
+            }
+        });
+        dialog = builder.create();
+        dialog.setCancelable(false);
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
+
+
+    }
 
 }

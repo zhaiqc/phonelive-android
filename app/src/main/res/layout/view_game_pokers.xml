@@ -116,7 +116,7 @@
                         android:layout_marginTop="10dp"
                         android:text="大乔x2"
                         android:textColor="@color/game_text_brown"
-                        android:textSize="@dimen/text_size_10"
+                        android:textSize="@dimen/text_size_7"
                         android:textStyle="bold"/>
 
                     <TextView
@@ -126,7 +126,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="27dp"
                         android:text="0"
-                        android:textSize="@dimen/text_size_10"/>
+                        android:textSize="@dimen/text_size_7"/>
 
                     <TextView
                         android:id="@+id/tv_game_pokers_dq_2"
@@ -136,7 +136,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="10dp"
                         android:text="0"
-                        android:textSize="@dimen/text_size_10"/>
+                        android:textSize="@dimen/text_size_7"/>
 
 
                 </RelativeLayout>
@@ -180,7 +180,7 @@
                         android:layout_marginTop="10dp"
                         android:text="貂蝉x2"
                         android:textColor="@color/game_text_brown"
-                        android:textSize="@dimen/text_size_10"
+                        android:textSize="@dimen/text_size_7"
                         android:textStyle="bold"/>
 
                     <TextView
@@ -190,7 +190,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="27dp"
                         android:text="0"
-                        android:textSize="@dimen/text_size_10"/>
+                        android:textSize="@dimen/text_size_7"/>
 
                     <TextView
                         android:id="@+id/tv_game_pokers_dc_2"
@@ -200,7 +200,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="10dp"
                         android:text="0"
-                        android:textSize="@dimen/text_size_10"/>
+                        android:textSize="@dimen/text_size_7"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -241,7 +241,7 @@
                         android:layout_marginTop="10dp"
                         android:text="小乔x2"
                         android:textColor="@color/game_text_brown"
-                        android:textSize="@dimen/text_size_10"
+                        android:textSize="@dimen/text_size_7"
                         android:textStyle="bold"/>
 
                     <TextView
@@ -251,7 +251,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="27dp"
                         android:text="0"
-                        android:textSize="@dimen/text_size_10"/>
+                        android:textSize="@dimen/text_size_7"/>
 
                     <TextView
                         android:id="@+id/tv_game_pokers_xq_2"
@@ -261,7 +261,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginBottom="10dp"
                         android:text="0"
-                        android:textSize="@dimen/text_size_10"/>
+                        android:textSize="@dimen/text_size_7"/>
                 </RelativeLayout>
 
             </LinearLayout>
@@ -322,7 +322,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_10"/>
+                    android:textSize="@dimen/text_size_7"/>
 
                 <TextView
                     android:id="@+id/tv_game_recharge"
@@ -331,7 +331,7 @@
                     android:layout_marginLeft="5dp"
                     android:text="@string/recharge"
                     android:textColor="#F0A643"
-                    android:textSize="@dimen/text_size_15"/>
+                    android:textSize="@dimen/text_size_12"/>
             </LinearLayout>
 
 

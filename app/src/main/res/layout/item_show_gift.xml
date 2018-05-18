@@ -40,7 +40,7 @@
         <!--礼物经验值-->
         <com.shenlive.phonelive.widget.BlackTextView
             android:visibility="gone"
-            android:textSize="@dimen/text_size_9"
+            android:textSize="@dimen/text_size_6"
             android:id="@+id/tv_show_gift_experience"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

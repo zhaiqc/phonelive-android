@@ -19,7 +19,7 @@
             android:textColor="@color/black"
             android:id="@+id/tv_gamename"
             android:layout_centerInParent="true"
-            android:textSize="@dimen/space_10"
+            android:textSize="@dimen/space_7"
             android:layout_marginTop="@dimen/space_10"
             android:layout_below="@id/iv_gamaicon"
             android:layout_width="wrap_content"

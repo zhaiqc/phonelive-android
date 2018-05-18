@@ -1,6 +1,7 @@
 package com.shenlive.phonelive.ui;
 
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
@@ -98,8 +99,8 @@ public class AttentionActivity extends ToolBarBaseActivity {
             @Override
             public void onResponse(String response,int id) {
                 JSONArray res = ApiUtils.checkIsSuccess(response);
-                mAttentionList.clear();
 
+                mAttentionList.clear();
                 if(res != null){
                     mAttentionList.addAll(ApiUtils.formatDataToList2(res,SimpleUserInfo.class));
                 }

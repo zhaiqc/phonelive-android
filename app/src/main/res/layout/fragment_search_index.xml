@@ -27,7 +27,7 @@
                 android:background="@null"
                 android:hint="@string/search_hint"
                 android:textColorHint="#999"
-                android:textSize="14dp" />
+                android:textSize="11dp" />
 
         </RelativeLayout>
 
@@ -41,7 +41,7 @@
             android:gravity="center"
             android:text="@string/cancel"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_size_15" />
+            android:textSize="@dimen/text_size_12" />
 
     </RelativeLayout>
 

@@ -59,7 +59,7 @@ public class LuckPan extends View {
         dPaint.setColor(Color.rgb(82, 182, 197));
         sPaint.setColor(Color.rgb(186, 226, 232));
         textPaint.setColor(Color.WHITE);
-        textPaint.setTextSize(TDevice.dpToPixel(16));
+        textPaint.setTextSize(TDevice.dpToPixel(14));
         mRectF = new RectF();
         mPrizeVoList = new ArrayList<>();
         PrizeVo prizeVo = new PrizeVo();

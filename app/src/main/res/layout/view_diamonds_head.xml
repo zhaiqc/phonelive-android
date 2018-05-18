@@ -23,7 +23,7 @@
             android:layout_marginTop="20dp"
             android:textColor="@color/global"
             android:id="@+id/tv_coin"
-            android:textSize="40dp"
+            android:textSize="37dp"
             android:text="0"
             android:textStyle="bold"
             android:layout_width="wrap_content"

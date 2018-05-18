@@ -119,6 +119,7 @@
     <string name="private_chat">私信</string>
     <string name="main_page">主页</string>
     <string name="change_pass">重置密码</string>
+    <string name="Privacy">隐私</string>
     <string name="sex">性别</string>
     <string name="man">男</string>
     <string name="weman">女</string>
@@ -138,6 +139,7 @@
     <string name="live_record">直播记录</string>
     <string name="not_hava_live_record">现在还没有直播记录</string>
     <string name="register">注册</string>
+    <string name="otherLogin">其他登陆</string>
     <string name="login">登录</string>
     <string name="edit_info">编辑资料</string>
     <string name="head">头像</string>
@@ -148,6 +150,7 @@
     <string name="immediate_register">立即注册</string>
     <string name="find_pass">找回密码</string>
     <string name="immediate_login">立即登陆</string>
+    <string name="nextStep">下一步</string>
     <string name="week_order">周榜</string>
     <string name="all_order">总榜</string>
     <string name="my_profit">我的收益</string>

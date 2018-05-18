@@ -12,7 +12,7 @@
             android:shadowDx="1"
             android:shadowDy="1"
             android:shadowRadius="1"
-            android:textSize="@dimen/text_size_16"
+            android:textSize="@dimen/text_size_14"
             android:id="@+id/tv_chat_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -22,7 +22,7 @@
             android:shadowDy="1"
             android:shadowRadius="1"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_16"
+            android:textSize="@dimen/text_size_14"
             android:id="@+id/tv_chat_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

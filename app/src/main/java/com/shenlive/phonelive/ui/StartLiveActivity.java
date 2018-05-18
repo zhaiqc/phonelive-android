@@ -1643,6 +1643,7 @@ public class StartLiveActivity extends ShowLiveActivityBase implements SearchMus
     }
 
     public void share(View v) {
+
         ShareUtils.share(this, v.getId(), mUser);
     }
 

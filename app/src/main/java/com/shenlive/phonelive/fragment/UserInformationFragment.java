@@ -35,13 +35,15 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import okhttp3.Call;
 
+import static com.shenlive.phonlive.R.id.iv_avatar;
+
 /**
  * 登录用户中心页面
  */
 public class UserInformationFragment extends BaseFragment{
 
     //头像
-    @InjectView(R.id.iv_avatar)
+    @InjectView(iv_avatar)
     AvatarView mIvAvatar;
     //昵称
     @InjectView(R.id.tv_name)
@@ -105,7 +107,7 @@ public class UserInformationFragment extends BaseFragment{
 
     @Override
     public void initView(View view) {
-
+        mIvAvatar.setOnClickListener(this);
         view.findViewById(R.id.ll_live).setOnClickListener(this);
         view.findViewById(R.id.ll_following).setOnClickListener(this);
         view.findViewById(R.id.ll_fans).setOnClickListener(this);
@@ -146,8 +148,7 @@ public class UserInformationFragment extends BaseFragment{
 
     private void sendRequestData() {
 
-        PhoneLiveApi.getMyUserInfo(AppContext.getInstance().getLoginUid(),
-                AppContext.getInstance().getToken(),stringCallback);
+        PhoneLiveApi.getMyUserInfo(AppContext.getInstance().getLoginUid(), AppContext.getInstance().getToken(),stringCallback);
     }
 
     private StringCallback stringCallback = new StringCallback() {
@@ -166,6 +167,7 @@ public class UserInformationFragment extends BaseFragment{
                    JSONObject object = res.getJSONObject(0);
                    mInfo = new Gson().fromJson(object.toString(),UserBean.class);
                    AppContext.getInstance().updateUserInfo(mInfo);
+
 
                    mLiveNum.setText(object.getString("lives"));
                    mFollowNum.setText(object.getString("follows"));
@@ -193,6 +195,7 @@ public class UserInformationFragment extends BaseFragment{
                                 mInfo.id,"");
                 break;
             case R.id.iv_avatar:
+                UIHelper.showHomePageActivity(getActivity(),AppContext.getInstance().getLoginUid());
                 break;
             case R.id.ll_live:
                 UIHelper.showLiveRecordActivity(getActivity(),mInfo.id);

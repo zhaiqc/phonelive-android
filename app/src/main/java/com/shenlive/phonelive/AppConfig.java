@@ -14,8 +14,9 @@ import java.util.Properties;
  * 应用程序配置类：用于保存用户相关信息及设置
  */
 public class AppConfig {
-    //域名  phonelive.me       http://www.zbbc.com
-    public static final String MAIN_URL ="http://398vip.zbbc.com";
+
+    //域名 http://www.shenchengzhibo.com  http://www.shenchengzhibo.com
+    public static final String MAIN_URL ="http://www.shenchengzhibo.com";
     //api地址
     public static final String MAIN_URL_API = MAIN_URL + "/api/public/";
     //支付宝回调地址

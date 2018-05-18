@@ -85,7 +85,7 @@ public class NewestFragment extends BaseFragment implements SwipeRefreshLayout.O
                     Toast.makeText(getContext(),"请登录..",Toast.LENGTH_SHORT).show();
                     return;
                 }
-                VideoPlayerActivity.startVideoPlayerActivity(getContext(), mUserList.get(position ));
+                VideoPlayerActivity.startVideoPlayerActivity(getContext(), mUserList.get(position));
             }
 
         });

@@ -23,6 +23,22 @@
         app:canNav="true"/>
 
     <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/ll_rivacy"
+        style="@style/option_item_rl" >
+
+        <com.shenlive.phonelive.widget.BlackTextView
+            style="@style/option_item_text"
+            android:text="@string/Privacy" />
+        <Switch
+            android:id="@+id/switch_btn"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/me_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:visibility="gone"
         android:background="@color/white"
         android:id="@+id/ll_push_manage"
@@ -31,7 +47,7 @@
         <com.shenlive.phonelive.widget.BlackTextView
             style="@style/option_item_text"
             android:text="@string/pushmanage" />
-        <ImageView
+        <Switch
             android:layout_alignParentRight="true"
             android:src="@drawable/me_next"
             android:layout_width="wrap_content"

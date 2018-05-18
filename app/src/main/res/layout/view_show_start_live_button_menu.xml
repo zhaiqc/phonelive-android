@@ -136,7 +136,7 @@
                 android:padding="4dp"
                 android:paddingLeft="5dp"
                 android:textColor="@color/gray"
-                android:textSize="@dimen/text_size_12" />
+                android:textSize="@dimen/text_size_9" />
 
             <com.shenlive.phonelive.widget.BlackButton
                 android:id="@+id/bt_send_chat"

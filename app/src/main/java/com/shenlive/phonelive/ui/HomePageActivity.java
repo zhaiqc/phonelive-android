@@ -1,6 +1,7 @@
 package com.shenlive.phonelive.ui;
 
 import android.graphics.Color;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -166,6 +167,7 @@ public class HomePageActivity extends ToolBarBaseActivity {
     public void initData() {
 
         uid = getIntent().getStringExtra("uid");
+        Log.d("getHomePageUInfo: ",uid );
 
         if(uid.equals(getUserID())){
             mLLBottomMenu.setVisibility(View.GONE);
@@ -180,6 +182,8 @@ public class HomePageActivity extends ToolBarBaseActivity {
             @Override
             public void onResponse(String response,int id) {
                 JSONArray res = ApiUtils.checkIsSuccess(response);
+                Log.d("getAttentionList: ", String.valueOf(res));
+
                 if(res != null){
 
                     try {

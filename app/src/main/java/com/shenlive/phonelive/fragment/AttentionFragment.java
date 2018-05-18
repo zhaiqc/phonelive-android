@@ -2,6 +2,7 @@ package com.shenlive.phonelive.fragment;
 
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -107,12 +108,13 @@ public class AttentionFragment extends BaseFragment implements SwipeRefreshLayou
         @Override
         public void onResponse(String response,int id) {
             mRefresh.setRefreshing(false);
-            JSONArray liveAndAttentionUserJson = ApiUtils.checkIsSuccess(response);
-//            Log.d("onResponse: ", String.valueOf(liveAndAttentionUserJson));
-            if (null != liveAndAttentionUserJson) {
+            JSONArray res = ApiUtils.checkIsSuccess(response);
 
+//            JSONArray liveAndAttentionUserJson = ApiUtils.checkIsSuccess(response);
+            Log.d("followonResponse: ", String.valueOf(response));
+            if (null != res) {
                 mUserList.clear();
-                mUserList.addAll(ApiUtils.formatDataToList2(liveAndAttentionUserJson,LiveJson.class));
+                mUserList.addAll(ApiUtils.formatDataToList2(res,LiveJson.class));
             }
             if (mUserList.size()>0){
                 fillUI();

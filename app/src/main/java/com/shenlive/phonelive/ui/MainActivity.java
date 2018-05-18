@@ -33,7 +33,6 @@ import com.hyphenate.chat.EMClient;
 import com.shenlive.phonelive.AppConfig;
 import com.shenlive.phonelive.AppContext;
 import com.shenlive.phonelive.AppManager;
-
 import com.shenlive.phonelive.api.remote.ApiUtils;
 import com.shenlive.phonelive.api.remote.PhoneLiveApi;
 import com.shenlive.phonelive.base.ToolBarBaseActivity;
@@ -67,9 +66,7 @@ import okhttp3.Call;
 
 
 //主页面
-public class MainActivity extends ToolBarBaseActivity implements
-        TabHost.OnTabChangeListener, BaseViewInterface,
-        View.OnTouchListener, LoginAwardDialogFragment.onLoginAwardImgShow {
+public class MainActivity extends ToolBarBaseActivity implements TabHost.OnTabChangeListener, BaseViewInterface, View.OnTouchListener, LoginAwardDialogFragment.onLoginAwardImgShow {
     @InjectView(android.R.id.tabhost)
     MyFragmentTabHost mTabHost;
     ImageView cart;
@@ -79,6 +76,7 @@ public class MainActivity extends ToolBarBaseActivity implements
     private float[] mCurrentPosition = new float[2];
     RelativeLayout layout;
 
+    View indicator;
     @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
@@ -95,36 +93,35 @@ public class MainActivity extends ToolBarBaseActivity implements
         if (Build.VERSION.SDK_INT > 10) {
             mTabHost.getTabWidget().setShowDividers(0);
         }
+
         getSupportActionBar().hide();
+
         initTabs();
+//        upDateTab(mTabHost);
 
-        mTabHost.setCurrentTab(100);
+        mTabHost.setCurrentTab(0);
         mTabHost.setOnTabChangedListener(this);
-        mTabHost.setNoTabChangedTag("1");
-
+        mTabHost.setNoTabChangedTag("2");
 
     }
+
 
     private void initTabs() {
         final MainTab[] tabs = MainTab.values();
         final int size = tabs.length;
-        String[] title = new String[]{"首页", "", "我"};
-
         for (int i = 0; i < size; i++) {
+            String[] title = new String[]{"直播","关注","", "发现","我"};
             MainTab mainTab = tabs[i];
-
             TabHost.TabSpec tab = mTabHost.newTabSpec(String.valueOf(mainTab.getResName()));
-            View indicator = LayoutInflater.from(getApplicationContext())
-                    .inflate(R.layout.tab_indicator, null);
+            indicator = LayoutInflater.from(getApplicationContext()).inflate(R.layout.tab_indicator, null);
             ImageView tabImg = (ImageView) indicator.findViewById(R.id.tab_img);
+            Drawable drawable = this.getResources().getDrawable(mainTab.getResIcon());
             BlackTextView tabTv = (BlackTextView) indicator.findViewById(R.id.tv_wenzi);
-            Drawable drawable = this.getResources().getDrawable(
-                    mainTab.getResIcon());
             tabTv.setText(title[i]);
-            if (i == 2) {
+            if (i == 3) {
                 cart = tabImg;
             }
-            if (i == 1) {
+            if (i == 2) {
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams((int) TDevice.dpToPixel(50), ViewGroup.LayoutParams.WRAP_CONTENT);
                 params.setMargins(0, 0, 2, 0);
                 tabImg.setLayoutParams(params);
@@ -146,7 +143,9 @@ public class MainActivity extends ToolBarBaseActivity implements
 
         }
 
-        mTabHost.getTabWidget().getChildAt(1).setOnClickListener(new View.OnClickListener() {
+
+
+        mTabHost.getTabWidget().getChildAt(2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startLive();
@@ -372,6 +371,8 @@ public class MainActivity extends ToolBarBaseActivity implements
 
     @Override
     public void onTabChanged(String tabId) {
+//        upDateTab(mTabHost);
+//        initTabs();
     }
 
     @Override
@@ -555,5 +556,9 @@ public class MainActivity extends ToolBarBaseActivity implements
             }
         });
     }
-
+//    private void upDateTab(FragmentTabHost mTabHost) {
+//
+//
+//
+//    }
 }

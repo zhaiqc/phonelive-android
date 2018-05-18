@@ -49,7 +49,7 @@
                android:singleLine="true"
                android:text="@string/not_have_live"
                android:textColor="@color/black"
-               android:textSize="@dimen/text_size_20" />
+               android:textSize="@dimen/text_size_17" />
 
            <com.shenlive.phonelive.widget.BlackTextView
                android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
                android:singleLine="true"
                android:text="@string/loading_error"
                android:textColor="@color/black"
-               android:textSize="@dimen/text_size_20" />
+               android:textSize="@dimen/text_size_17" />
 
            <com.shenlive.phonelive.widget.BlackTextView
                android:layout_width="wrap_content"

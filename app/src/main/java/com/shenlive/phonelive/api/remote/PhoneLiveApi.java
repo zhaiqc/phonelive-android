@@ -1,5 +1,7 @@
 package com.shenlive.phonelive.api.remote;
 
+import android.util.Log;
+
 import com.shenlive.phonelive.AppConfig;
 import com.shenlive.phonelive.AppContext;
 import com.shenlive.phonelive.bean.GiftBean;
@@ -10,6 +12,7 @@ import com.zhy.http.okhttp.callback.FileCallBack;
 import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
@@ -43,6 +46,32 @@ public class PhoneLiveApi {
         }
 
     }
+    /**
+     *获取登陆验证码
+     */
+
+    public  static  void  getLoginCode(String phoneNum,StringCallback callback){
+        String url =AppConfig.MAIN_URL_API;
+        OkHttpUtils.get().url(url)
+                .addParams("service","Login.getForgetCode")
+                .addParams("mobile",phoneNum)
+                .build()
+                .execute(callback);
+
+    }
+    /**
+     *验证码登陆
+     */
+    public  static  void  doCodeLogin(String phoneMum,String code ,StringCallback callback){
+        String url =AppConfig.MAIN_URL_API;
+        OkHttpUtils.get()
+                .url(url)
+                .addParams("service","Login.usercodeLogin")
+                .addParams("user_login",phoneMum)
+                .addParams("code",code)
+                .build()
+                .execute(callback);
+    }
 
     /**
      * 获取分类列表
@@ -67,6 +96,15 @@ public class PhoneLiveApi {
                 .build()
                 .execute(callback);
     }
+
+    /**
+     *
+     * @param user_login
+     * @param user_pass
+     * @param user_pass2
+     * @param code
+     * @param callback
+     */
 
 
     //HHH 2016-09-09
@@ -124,6 +162,12 @@ public class PhoneLiveApi {
                 .build()
                 .execute(callback);
 
+    }
+    /**
+     * 删除视频
+     */
+    public  static  void  delVideo(String uid,String token,String showid,StringCallback callback){
+        OkHttpUtils.get().url(AppConfig.MAIN_URL_API).addParams("service","User.getLivedel").addParams("uid",uid).addParams("token",token).addParams("showid",showid).build().execute(callback);
     }
 
     /**
@@ -201,6 +245,7 @@ public class PhoneLiveApi {
      * @dw 开始直播
      */
     public static void createLive(String uid, String a1, String a2, String title, String token, String name, File file, String type, String type_val, StringCallback callback) {
+        Log.d("createLive: ","uid:"+uid+ "token:"+token);
         try {
             PostFormBuilder postFormBuilder = OkHttpUtils.post()
                     .url(AppConfig.MAIN_URL_API)
@@ -212,8 +257,9 @@ public class PhoneLiveApi {
                     .addParams("avatar_thumb", a2)
                     .addParams("city", AppContext.address)
                     .addParams("province", AppContext.province)
-                    .addParams("lat", AppContext.lat)  //HHH 2016-09-09
-                    .addParams("lng", AppContext.lng)
+                    .addParams("lat",String.valueOf(AppContext.lat))  //HHH 2016-09-09
+
+                    .addParams("lng", String.valueOf(AppContext.lng))
                     .addParams("token", token)
                     .addParams("type", type)
                     .addParams("type_val", type_val);
@@ -463,6 +509,20 @@ public class PhoneLiveApi {
     }
 
     /**
+     *
+     */
+    public static void getFollowList(String uid, String ucid, StringCallback callback) {
+        OkHttpUtils.get()
+                .url(AppConfig.MAIN_URL_API)
+                .addParams("service", "Home.getFollow")
+                .addParams("uid", uid)
+                .addParams("touid", ucid)
+                .tag("getAttentionList")
+                .build()
+                .execute(callback);
+    }
+
+    /**
      * @param uid 查询用户id
      * @dw 获取魅力值排行
      */
@@ -493,6 +553,19 @@ public class PhoneLiveApi {
                 .execute(callback);
 
     }
+
+    /**
+     * 获取附近的房间
+     */
+public  static  void  getNearbyRoom(StringCallback callback){
+    OkHttpUtils.get().url(AppConfig.MAIN_URL_API).addParams("service","Home.getPosition").addParams("lng",AppContext.lng).addParams("lat",AppContext.lat).build().execute(callback);
+}
+/**
+ * 开关隐私
+ */
+public  static  void  getPrivacy(String uid,String token,String yinsi,StringCallback callback){
+    OkHttpUtils.get().url(AppConfig.MAIN_URL_API).addParams("service","User.getYinsi").addParams("uid",uid).addParams("token",token).addParams("yinsi",yinsi).build().execute(callback);
+}
 
     /**
      * @dw 获取最新
@@ -561,6 +634,21 @@ public class PhoneLiveApi {
                 .tag("getLiveRecord")
                 .build()
                 .execute(callback);
+    }
+    /**
+     * 获取其他人的直播回放
+     */
+
+    public  static  void  getOtherLiveRecord(String uid,String toUid,StringCallback callback){
+        OkHttpUtils.get()
+                .url(AppConfig.MAIN_URL_API)
+                .addParams("service", "User.getLiverecord")
+                .addParams("uid", uid)
+                .addParams("touid", uid)
+                .tag("getLiveRecord")
+                .build()
+                .execute(callback);
+
     }
 
     /**

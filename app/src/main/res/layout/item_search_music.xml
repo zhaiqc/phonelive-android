@@ -12,7 +12,7 @@
         <com.shenlive.phonelive.widget.BlackTextView
             android:textColor="@color/black"
             android:id="@+id/item_tv_search_music_name"
-            android:textSize="@dimen/text_size_15"
+            android:textSize="@dimen/text_size_12"
             android:text="明天你好"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -32,13 +32,13 @@
         <com.shenlive.phonelive.widget.BlackTextView
             android:visibility="gone"
             android:id="@+id/item_tv_search_music_time"
-            android:textSize="@dimen/text_size_15"
+            android:textSize="@dimen/text_size_12"
             android:text="3.39"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <com.dd.CircularProgressButton
             android:focusable="false"
-            android:textSize="@dimen/text_size_8"
+            android:textSize="@dimen/text_size_5"
             app:cpb_cornerRadius="48dp"
             android:id="@+id/item_btn_search_music_download"
             android:textColor="@color/white"

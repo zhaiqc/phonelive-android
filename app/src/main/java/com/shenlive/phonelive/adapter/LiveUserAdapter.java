@@ -1,6 +1,7 @@
 package com.shenlive.phonelive.adapter;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,8 +63,10 @@ public class LiveUserAdapter extends BaseAdapter {
         LiveJson live = mUserList.get(position);
         viewHolder = (ViewHolder) convertView.getTag();
         viewHolder.mUserNick.setText(live.user_nicename);
+        viewHolder.mUserNick.setTextSize(13);
         viewHolder.mUserLocal.setText(live.city);
         viewHolder.mUserHead.setAvatarUrl(live.avatar_thumb);
+        Log.d("avatar_thumb", live.avatar_thumb);
         viewHolder.mUserNums.setText(live.nums);
 
         if (live.admission != null)
@@ -73,7 +76,7 @@ public class LiveUserAdapter extends BaseAdapter {
                 viewHolder.mIvLabel.setVisibility(View.VISIBLE);
             }
         //用于平滑加载图片
-        SimpleUtils.loadImageForView(AppContext.getInstance(),viewHolder.mUserPic,live.thumb,0);
+        SimpleUtils.loadImageForView(AppContext.getInstance(),viewHolder.mUserPic,live.avatar_thumb,0);
 
 
         if(!TextUtils.isEmpty(live.title)){

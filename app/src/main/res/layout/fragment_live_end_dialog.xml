@@ -9,7 +9,7 @@
         android:layout_height="match_parent">
         <TextView
             android:textColor="@color/global"
-            android:textSize="@dimen/text_size_25"
+            android:textSize="@dimen/text_size_22"
             android:layout_marginTop="100dp"
             android:layout_centerHorizontal="true"
             android:text="@string/liveend"

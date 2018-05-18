@@ -57,6 +57,7 @@ public class AppContext extends BaseApplication {
     public static String lng = "'";
     public static String lat = "";
     public static String directory ="";
+    public  static  String yinsi;
 
 
     @Override
@@ -188,6 +189,7 @@ public class AppContext extends BaseApplication {
             login = true;
             loginUid = user.id;
             Token = user.token;
+            yinsi =user.yinsi;
         } else {
             this.cleanLoginInfo();
         }
@@ -316,6 +318,8 @@ public class AppContext extends BaseApplication {
                 setProperty("user.signature", user.signature);
                 setProperty("user.avatar_thumb", user.avatar_thumb);
                 setProperty("user.level", user.level);
+                setProperty("user.yinsi", user.yinsi);
+
 
 
             }
@@ -344,10 +348,12 @@ public class AppContext extends BaseApplication {
         user.avatar_thumb = getProperty("user.avatar_thumb");
         user.birthday = getProperty("user.birthday");
         user.directory = getProperty("user.directory");
+        user.yinsi = getProperty("user.yinsi");
 
 
         return user;
     }
+
 
     /**
      * 清除登录信息
@@ -361,6 +367,7 @@ public class AppContext extends BaseApplication {
     public String getLoginUid() {
         return loginUid;
     }
+
 
 
 

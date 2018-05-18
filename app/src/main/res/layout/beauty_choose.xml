@@ -24,7 +24,7 @@
             android:text="美颜类型："
 
             android:textColor="@color/font_color_35"
-            android:textSize="16sp"/>
+            android:textSize="12sp"/>
 
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/beauty_spin"
@@ -32,7 +32,7 @@
             android:layout_height="32dp"
             android:layout_marginLeft="28dp"
             android:text="none"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:visibility="invisible">
         </android.support.v7.widget.AppCompatSpinner>
     </LinearLayout>
@@ -53,7 +53,7 @@
             android:gravity="center"
             android:text="磨皮"
             android:textColor="@color/font_color_35"
-            android:textSize="14sp"/>
+            android:textSize="12sp"/>
 
         <android.support.v7.widget.AppCompatSeekBar
             android:id="@+id/grind_seek_bar"
@@ -78,7 +78,7 @@
             android:gravity="center"
             android:text="美白"
             android:textColor="@color/font_color_35"
-            android:textSize="14sp"/>
+            android:textSize="12sp"/>
 
         <android.support.v7.widget.AppCompatSeekBar
             android:id="@+id/whiten_seek_bar"
@@ -105,7 +105,7 @@
             android:gravity="center"
             android:text="红润"
             android:textColor="@color/font_color_35"
-            android:textSize="14sp"/>
+            android:textSize="12sp"/>
 
         <android.support.v7.widget.AppCompatSeekBar
             android:id="@+id/ruddy_seek_bar"

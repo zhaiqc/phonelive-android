@@ -83,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/card_0"
                         android:text="0"
-                        android:textSize="@dimen/text_size_10"/>
+                        android:textSize="@dimen/text_size_8"/>
 
                     <TextView
                         android:id="@+id/tv_game_betting_1"
@@ -116,7 +116,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/card_1"
                         android:text="0"
-                        android:textSize="@dimen/text_size_10"/>
+                        android:textSize="@dimen/text_size_8"/>
 
                     <TextView
                         android:id="@+id/tv_game_betting_2"
@@ -149,7 +149,7 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/card_2"
                         android:text="0"
-                        android:textSize="@dimen/text_size_10"/>
+                        android:textSize="@dimen/text_size_8"/>
 
                     <TextView
                         android:id="@+id/tv_game_betting_3"
@@ -181,7 +181,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/card_3"
-                        android:textSize="@dimen/text_size_10"/>
+                        android:textSize="@dimen/text_size_8"/>
 
                     <TextView
                         android:id="@+id/tv_game_betting_4"
@@ -225,7 +225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_10"/>
+                    android:textSize="@dimen/text_size_8"/>
 
                 <TextView
                     android:id="@+id/tv_game_recharge"
@@ -234,7 +234,7 @@
                     android:layout_marginLeft="5dp"
                     android:text="@string/recharge"
                     android:textColor="#F0A643"
-                    android:textSize="@dimen/text_size_12"/>
+                    android:textSize="@dimen/text_size_10"/>
             </LinearLayout>
 
 

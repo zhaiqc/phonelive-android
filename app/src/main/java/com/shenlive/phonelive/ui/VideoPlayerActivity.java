@@ -1506,8 +1506,9 @@ public class VideoPlayerActivity extends ShowLiveActivityBase implements View.On
 
 
     public static void startVideoPlayerActivity(final Context context, final LiveJson live) {
-        PhoneLiveApi.checkoutRoom(AppContext.getInstance().getLoginUid()
-                , AppContext.getInstance().getToken(), live.stream, live.uid, new StringCallback() {
+
+
+        PhoneLiveApi.checkoutRoom(AppContext.getInstance().getLoginUid(), AppContext.getInstance().getToken(), live.stream, live.uid, new StringCallback() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
 

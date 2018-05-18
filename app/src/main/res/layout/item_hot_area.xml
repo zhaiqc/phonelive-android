@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:padding="10dp">
     <TextView
-        android:textSize="@dimen/text_size_15"
+        android:textSize="@dimen/text_size_14"
         android:layout_centerVertical="true"
         android:id="@+id/tv_area"
         android:layout_width="wrap_content"

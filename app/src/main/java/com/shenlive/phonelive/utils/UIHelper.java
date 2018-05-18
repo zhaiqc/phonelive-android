@@ -9,6 +9,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.shenlive.phonelive.fragment.ManageListDialogFragment;
+import com.shenlive.phonelive.ui.CodeLoginActivity;
 import com.shenlive.phonelive.ui.EditInfoActivity;
 import com.shenlive.phonelive.ui.RequestCashActivity;
 import com.shenlive.phonelive.ui.SettingActivity;
@@ -68,7 +69,13 @@ public class UIHelper {
         Intent intent = new Intent(context, PhoneLoginActivity.class);
         context.startActivity(intent);
     }
-
+    /**
+     * 验证码登陆
+     */
+    public static void showCodeLogin(Context context) {
+        Intent intent = new Intent(context, CodeLoginActivity.class);
+        context.startActivity(intent);
+    }
     /**
      * 网页支付
      *

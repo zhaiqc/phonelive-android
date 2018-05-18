@@ -3,6 +3,7 @@ package com.shenlive.phonelive.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,7 +57,7 @@ public class ShareUtils {
                 break;
         }
     }
-    public static void share(final Context context, final int index, final SimpleUserInfo user, final PlatformActionListener listener){
+    public static void share(final Context context, final int index, final SimpleUserInfo user, final String introduce, final PlatformActionListener listener){
         PhoneLiveApi.getConfig(new StringCallback() {
             @Override
             public void onError(Call call, Exception e,int id) {
@@ -66,19 +67,19 @@ public class ShareUtils {
             @Override
             public void onResponse(String response,int id) {
                 JSONArray res = ApiUtils.checkIsSuccess(response);
+                Log.d("shares", String.valueOf(res));
                 if(res != null){
                     try {
                         JSONObject jsonObject = res.getJSONObject(0);
-//                         = jsonObject.getString("app_android");
-//                        Log.d("shareUrl:", shareUrl);
 
-
-//                        if(index == 1 || index == 2){
                         String shareUrl = jsonObject.getString("wx_siteurl") + user.id;
 //                        }
                         String[] names = new String[]{SinaWeibo.NAME, Wechat.NAME, WechatMoments.NAME, QQ.NAME, QZone.NAME};
-
-                        share(context, names[index], jsonObject.getString("share_title"), user.user_nicename + jsonObject.getString("share_des"), user, shareUrl, listener);
+                    if (introduce !=""){
+                        share(context, names[index], jsonObject.getString("share_title"), introduce , user, shareUrl, listener);
+                    }else {
+                        share(context, names[index], jsonObject.getString("share_title"), user.user_nicename +jsonObject.getString("share_des") , user, shareUrl, listener);
+                    }
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -91,6 +92,41 @@ public class ShareUtils {
         });
 
     }
+    public static void share(final Context context, final int index, final SimpleUserInfo user, final PlatformActionListener listener){
+        PhoneLiveApi.getConfig(new StringCallback() {
+            @Override
+            public void onError(Call call, Exception e,int id) {
+                Toast.makeText(context,"获取分享地址失败",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onResponse(String response,int id) {
+                JSONArray res = ApiUtils.checkIsSuccess(response);
+                Log.d("shares", String.valueOf(res));
+                if(res != null){
+                    try {
+                        JSONObject jsonObject = res.getJSONObject(0);
+
+                        String shareUrl = jsonObject.getString("wx_siteurl") + user.id;
+//                        }
+                        String[] names = new String[]{SinaWeibo.NAME, Wechat.NAME, WechatMoments.NAME, QQ.NAME, QZone.NAME};
+
+                        share(context, names[index], jsonObject.getString("share_title"), user.user_nicename +jsonObject.getString("share_des") , user, shareUrl, listener);
+
+
+//jsonObject.getString("share_des")
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+
+                }
+
+            }
+        });
+
+    }
+
     public static void share(final Context context, String name, String des,String title, final SimpleUserInfo user,String shareUrl, PlatformActionListener listener) {
         ShareSDK.initSDK(context);
         final OnekeyShare oks = new OnekeyShare();

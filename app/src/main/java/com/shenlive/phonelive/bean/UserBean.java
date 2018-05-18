@@ -23,6 +23,8 @@ public class UserBean extends SimpleUserInfo implements Parcelable {
     public String uType;
     @SerializedName("directory")
     public String directory;
+    @SerializedName("yinsi")
+    public  String yinsi;
 
 
 
@@ -41,6 +43,7 @@ public class UserBean extends SimpleUserInfo implements Parcelable {
         dest.writeString(this.consumption);
         dest.writeString(this.uType);
         dest.writeString(this.directory);
+        dest.writeString(this.yinsi);
 
     }
 
@@ -56,6 +59,7 @@ public class UserBean extends SimpleUserInfo implements Parcelable {
         this.consumption = in.readString();
         this.uType = in.readString();
         this.directory = in.readString();
+        this.yinsi = in.readString();
 
     }
 

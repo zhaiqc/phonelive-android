@@ -48,7 +48,7 @@ public class LoginUtils {
         //环信退出登陆
         EMClient.getInstance().logout(true);
         AppContext.getInstance().Logout();
-        UIHelper.showLoginSelectActivity(context);
+        UIHelper.showCodeLogin(context);
     }
 
     public static void tokenIsOutTime(StringCallback callback){
