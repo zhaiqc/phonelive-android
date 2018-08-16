@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
                 xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.ylive.phonelive.ui.customviews.ActivityTitle
+    <com.shenlive.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/view_title"
         android:background="@color/graywhite"
         app:titleColor="@color/black"
@@ -55,7 +55,7 @@
             android:layout_gravity="center_vertical"
             android:src="@drawable/shibai" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
@@ -63,9 +63,9 @@
             android:singleLine="true"
             android:text="@string/loading_error"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_size_20" />
+            android:textSize="@dimen/text_size_17" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"

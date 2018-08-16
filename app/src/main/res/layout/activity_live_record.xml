@@ -2,10 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <com.ylive.phonelive.ui.customviews.ActivityTitle
+    <com.shenlive.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/view_title"
         android:background="@color/graywhite"
         app:titleColor="@color/black"
@@ -23,6 +23,36 @@
         >
 
     </ListView>
+
+    <!--删除布局-->
+    <LinearLayout
+        android:id="@+id/linear_del"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_del"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="删除"
+            android:textColor="#000000"
+            android:background= "@color/calendar_header"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:text="取消"
+            android:textColor="#000000"
+            android:background="@color/ampm_text_color"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+    </LinearLayout>
     <LinearLayout
         android:visibility="gone"
         android:id="@+id/fensi"
@@ -37,7 +67,7 @@
             android:layout_gravity="center_vertical"
             android:src="@drawable/buzai" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
@@ -45,9 +75,9 @@
             android:singleLine="true"
             android:text="@string/not_hava_live_record"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_size_20" />
+            android:textSize="@dimen/text_size_17" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
@@ -71,7 +101,7 @@
             android:layout_gravity="center_vertical"
             android:src="@drawable/shibai" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
@@ -79,9 +109,9 @@
             android:singleLine="true"
             android:text="@string/loading_error"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_size_20" />
+            android:textSize="@dimen/text_size_17" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"

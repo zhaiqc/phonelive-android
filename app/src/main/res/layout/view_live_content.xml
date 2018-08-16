@@ -24,7 +24,7 @@
                 android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <com.ylive.phonelive.widget.AvatarView
+                <com.shenlive.phonelive.widget.AvatarView
                     android:id="@+id/iv_live_emcee_head"
                     android:layout_marginTop="1dp"
                     android:layout_width="33dp"
@@ -38,18 +38,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-                    <com.ylive.phonelive.widget.BlackTextView
+                    <com.shenlive.phonelive.widget.BlackTextView
                         android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_11"
+                        android:textSize="@dimen/text_size_8"
                         android:text="直播Live"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
-                    <com.ylive.phonelive.widget.BlackTextView
+                    <com.shenlive.phonelive.widget.BlackTextView
                         android:layout_gravity="center"
                         android:id="@+id/tv_live_num"
                         android:layout_marginTop="1dp"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_11"
+                        android:textSize="@dimen/text_size_8"
                         android:gravity="center"
                         android:text="0"
                         android:layout_width="wrap_content"
@@ -98,23 +98,23 @@
             android:layout_height="13dp" />
         <TextView
             android:id="@+id/tv_live_tick_name"
-            android:textSize="@dimen/text_size_12"
+            android:textSize="@dimen/text_size_9"
             android:textColor="@color/white"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <com.ylive.phonelive.widget.BlackTextView
-            android:textSize="@dimen/text_size_12"
+        <com.shenlive.phonelive.widget.BlackTextView
+            android:textSize="@dimen/text_size_9"
             android:id="@+id/tv_yingpiao_num"
             android:textColor="@color/white"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="7dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <com.ylive.phonelive.widget.BlackTextView
-            android:textSize="@dimen/text_size_12"
+        <com.shenlive.phonelive.widget.BlackTextView
+            android:textSize="@dimen/text_size_9"
             android:layout_marginRight="3dp"
             android:textColor="@color/white"
             android:id="@+id/tv_live_number"
@@ -130,9 +130,9 @@
     </LinearLayout>
     <!--魅力值labe end-->
     <!--映客号-->
-    <com.ylive.phonelive.widget.BlackTextView
+    <com.shenlive.phonelive.widget.BlackTextView
         android:visibility="gone"
-        android:textSize="@dimen/text_size_14"
+        android:textSize="@dimen/text_size_11"
         android:layout_marginRight="10dp"
         android:textColor="@color/black"
         android:layout_marginTop="80dp"
@@ -168,7 +168,7 @@
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_17"
+            android:textSize="@dimen/text_size_14"
             android:textStyle="bold" />
 
 
@@ -186,17 +186,17 @@
         </ListView>
 
         <!--游戏布局-->
-        <com.ylive.phonelive.game.HaiDaoPokersLayout
+        <com.shenlive.phonelive.game.HaiDaoPokersLayout
             android:id="@+id/haidao_pokers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone" />
-        <com.ylive.phonelive.game.JinHuaPokersLayout
+        <com.shenlive.phonelive.game.JinHuaPokersLayout
             android:id="@+id/pl_pokers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone" />
-        <com.ylive.phonelive.game.NiuZaiPokersLayout
+        <com.shenlive.phonelive.game.NiuZaiPokersLayout
             android:id="@+id/pl_niuzai_pokers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

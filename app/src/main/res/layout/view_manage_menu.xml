@@ -10,7 +10,7 @@
         android:id="@+id/tv_manage_set_close_live"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
 
             android:background="@color/black"
             style="@style/live_show_manage_menu_item"
@@ -27,7 +27,7 @@
         android:id="@+id/tv_manage_set_disable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
 
             android:background="@color/black"
             style="@style/live_show_manage_menu_item"
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:background="@color/black"
             style="@style/live_show_manage_menu_item"
             android:text="@string/kick" />
@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:background="@color/black"
             style="@style/live_show_manage_menu_item"
             android:text="@string/shutup" />
@@ -77,7 +77,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_set_manage"
             android:background="@color/black"
             style="@style/live_show_manage_menu_item"
@@ -94,7 +94,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:background="@color/black"
             style="@style/live_show_manage_menu_item"
             android:text="@string/manage_list" />
@@ -112,7 +112,7 @@
         android:id="@+id/tv_manage_set_report"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
 
             android:background="@color/black"
             style="@style/live_show_manage_menu_item"
@@ -130,7 +130,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:background="@color/black"
             style="@style/live_show_manage_menu_item"
             android:text="@string/cancel" />

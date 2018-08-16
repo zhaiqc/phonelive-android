@@ -6,7 +6,7 @@
     android:background="@color/main_background"
     android:orientation="vertical">
 
-    <com.ylive.phonelive.ui.customviews.ActivityTitle
+    <com.shenlive.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/view_title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="20dp" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_votes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/can_cash_money"
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="20dp" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_profit_canwithdraw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/day_can_cash_money"
@@ -109,7 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="20dp" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_profit_withdraw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/abc_text_size_subhead_material" />
 
-    <com.ylive.phonelive.widget.BlackTextView
+    <com.shenlive.phonelive.widget.BlackTextView
         android:id="@+id/tv_common_problem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

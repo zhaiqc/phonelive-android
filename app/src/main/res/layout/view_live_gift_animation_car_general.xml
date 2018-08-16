@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="wrap_content"
     android:layout_height="wrap_content">
-    <com.ylive.phonelive.widget.AvatarView
+    <com.shenlive.phonelive.widget.AvatarView
         android:layout_centerHorizontal="true"
         android:id="@+id/iv_animation_red_head"
         android:layout_width="40dp"

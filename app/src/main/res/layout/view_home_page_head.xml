@@ -47,7 +47,7 @@
 
         </RelativeLayout>
         <!--头像-->
-        <com.ylive.phonelive.widget.AvatarView
+        <com.shenlive.phonelive.widget.AvatarView
             android:id="@+id/av_home_page_uhead"
             android:scaleType="centerCrop"
             app:border_width="2dp"
@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical">
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:id="@+id/tv_home_page_uname"
                 android:textSize="@dimen/text_size_15"
                 android:textColor="@color/white"
@@ -82,7 +82,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:id="@+id/tv_home_page_follow"
                 android:textColor="@color/white"
                 android:text="关注 0"
@@ -97,14 +97,14 @@
                 android:layout_width="1px"
                 android:layout_height="15dp"/>
 
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:id="@+id/tv_home_page_fans"
                 android:textColor="@color/white"
                 android:text="粉丝 0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_home_page_sign"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"

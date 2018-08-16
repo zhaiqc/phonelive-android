@@ -7,7 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <com.ylive.phonelive.widget.LoadUrlImageView
+        <com.shenlive.phonelive.widget.LoadUrlImageView
             android:id="@+id/av_edit_head"
             android:layout_width="match_parent"
             android:layout_height="300dp"/>
@@ -26,14 +26,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <com.ylive.phonelive.widget.BlackButton
+        <com.shenlive.phonelive.widget.BlackButton
             android:id="@+id/btn_avator_from_album"
             android:textColor="@color/white"
             android:text="@string/selectphotoonalbu"
             android:background="@drawable/btn_edit_head_radius"
             android:layout_width="220dp"
             android:layout_height="wrap_content" />
-        <com.ylive.phonelive.widget.BlackButton
+        <com.shenlive.phonelive.widget.BlackButton
             android:id="@+id/btn_avator_photograph"
             android:textColor="@color/white"
             android:text="@string/selectphotooncamera"

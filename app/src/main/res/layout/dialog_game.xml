@@ -18,7 +18,7 @@
             android:layout_height="48dp"
             android:gravity="center"
             android:text="选择游戏"
-            android:textSize="@dimen/space_20"/>
+            android:textSize="@dimen/space_19"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:layout_marginRight="@dimen/space_10"
             android:background="@color/gray"/>
 
-        <com.ylive.phonelive.widget.GridViewWithHeaderAndFooter
+        <com.shenlive.phonelive.widget.GridViewWithHeaderAndFooter
             android:layout_gravity="center_horizontal"
             android:id="@+id/gv_game"
             android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             android:numColumns="3"
             android:padding="@dimen/space_20"
             android:verticalSpacing="15dp">
-        </com.ylive.phonelive.widget.GridViewWithHeaderAndFooter>
+        </com.shenlive.phonelive.widget.GridViewWithHeaderAndFooter>
 
     </LinearLayout>
 </RelativeLayout>

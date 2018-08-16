@@ -137,7 +137,7 @@ public class EditPageLand extends EditPage implements OnClickListener, TextWatch
 		etContent.setPadding(padding, padding, padding, padding);
 		etContent.setBackgroundDrawable(null);
 		etContent.setTextColor(0xff3b3b3b);
-		etContent.setTextSize(TypedValue.COMPLEX_UNIT_SP, 21);
+		etContent.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
 		etContent.setText(sp.getText());
 		LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, LayoutParams.WRAP_CONTENT);
 		lp.weight = 1;
@@ -183,7 +183,7 @@ public class EditPageLand extends EditPage implements OnClickListener, TextWatch
 
 		tvAt = new TextView(activity);
 		tvAt.setTextColor(0xff3b3b3b);
-		tvAt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 21);
+		tvAt.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
 		tvAt.setGravity(Gravity.BOTTOM);
 		tvAt.setText("@");
 		int padding = (int) (DESIGN_LEFT_PADDING * ratio);
@@ -199,7 +199,7 @@ public class EditPageLand extends EditPage implements OnClickListener, TextWatch
 
 		tvTextCouter = new TextView(activity);
 		tvTextCouter.setTextColor(0xff3b3b3b);
-		tvTextCouter.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+		tvTextCouter.setTextSize(TypedValue.COMPLEX_UNIT_SP, 17);
 		tvTextCouter.setGravity(Gravity.BOTTOM | Gravity.RIGHT);
 		onTextChanged(etContent.getText(), 0, 0, 0);
 		tvTextCouter.setPadding(padding, 0, padding, 0);

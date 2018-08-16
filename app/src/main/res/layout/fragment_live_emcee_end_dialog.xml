@@ -16,24 +16,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <com.ylive.phonelive.widget.AvatarView
+            <com.shenlive.phonelive.widget.AvatarView
                 app:border_color="@color/global"
                 app:border_width="2dp"
                 android:id="@+id/av_user_head"
                 android:layout_width="90dp"
                 android:layout_height="90dp"/>
             <TextView
-                android:textSize="@dimen/text_size_20"
+                android:textSize="@dimen/text_size_17"
                 android:layout_marginTop="10dp"
                 android:id="@+id/tv_user_nick"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:layout_marginTop="10dp"
                 android:textColor="@color/global"
-                android:textSize="@dimen/text_size_25"
+                android:textSize="@dimen/text_size_22"
                 android:text="@string/liveend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -54,8 +54,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <com.ylive.phonelive.widget.BlackTextView
-                    android:textSize="@dimen/text_size_15"
+                <com.shenlive.phonelive.widget.BlackTextView
+                    android:textSize="@dimen/text_size_12"
                     android:layout_marginTop="10dp"
                     android:text="0"
                     android:id="@+id/tv_live_end_num"
@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_marginTop="10dp"
-                    android:textSize="@dimen/text_size_15"
+                    android:textSize="@dimen/text_size_12"
                     android:textColor="@color/white"
                     android:text="@string/live_num"
                     android:layout_width="wrap_content"
@@ -85,8 +85,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <com.ylive.phonelive.widget.BlackTextView
-                    android:textSize="@dimen/text_size_15"
+                <com.shenlive.phonelive.widget.BlackTextView
+                    android:textSize="@dimen/text_size_12"
                     android:layout_marginTop="10dp"
                     android:id="@+id/tv_live_duration"
                     android:textColor="@color/white"
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_marginTop="10dp"
-                    android:textSize="@dimen/text_size_15"
+                    android:textSize="@dimen/text_size_12"
                     android:textColor="@color/white"
                     android:text="直播时长"
                     android:layout_width="wrap_content"
@@ -112,8 +112,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <com.ylive.phonelive.widget.BlackTextView
-                    android:textSize="@dimen/text_size_15"
+                <com.shenlive.phonelive.widget.BlackTextView
+                    android:textSize="@dimen/text_size_12"
                     android:layout_marginTop="10dp"
                     android:text="0"
                     android:id="@+id/tv_live_end_yp_num"
@@ -123,7 +123,7 @@
                 <TextView
                     android:id="@+id/tv_live_end_yp_name"
                     android:layout_marginTop="10dp"
-                    android:textSize="@dimen/text_size_15"
+                    android:textSize="@dimen/text_size_12"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -131,7 +131,7 @@
 
 
         </LinearLayout>
-        <com.ylive.phonelive.widget.BlackButton
+        <com.shenlive.phonelive.widget.BlackButton
             android:layout_marginBottom="140dp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"

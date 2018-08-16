@@ -24,13 +24,13 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-                <com.ylive.phonelive.widget.BlackTextView
+                <com.shenlive.phonelive.widget.BlackTextView
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_size_10"
                     android:text="@string/liansendgift"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-                <com.ylive.phonelive.widget.BlackTextView
+                <com.shenlive.phonelive.widget.BlackTextView
                     android:layout_gravity="center"
                     android:id="@+id/tv_show_gift_outtime"
                     android:textColor="@color/white"
@@ -73,13 +73,13 @@
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-                    <com.ylive.phonelive.widget.BlackTextView
+                    <com.shenlive.phonelive.widget.BlackTextView
                         android:textSize="@dimen/text_size_15"
                         android:textColor="@color/global"
                         android:text="充值:"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
-                    <com.ylive.phonelive.widget.BlackTextView
+                    <com.shenlive.phonelive.widget.BlackTextView
                         android:id="@+id/tv_show_select_user_coin"
                         android:text="0"
                         android:textColor="@color/light_gray2"
@@ -99,7 +99,7 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
-                <com.ylive.phonelive.widget.BlackButton
+                <com.shenlive.phonelive.widget.BlackButton
                     android:id="@+id/btn_show_send_gift"
                     android:textColor="@color/white"
                     android:text="@string/sendgift"

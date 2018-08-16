@@ -19,7 +19,6 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:src="@mipmap/h_search" />
-
         <RelativeLayout
             android:id="@+id/fl_tab_container"
             android:layout_width="270dp"
@@ -36,7 +35,7 @@
                 android:src="@drawable/home_icn_drop_down"
                 android:visibility="gone" />
 
-            <com.ylive.phonelive.widget.PagerSlidingTabStrip
+            <com.shenlive.phonelive.widget.PagerSlidingTabStrip
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"

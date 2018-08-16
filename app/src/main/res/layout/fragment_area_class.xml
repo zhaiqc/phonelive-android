@@ -12,10 +12,10 @@
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="60dp" />
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:textColor="@color/white"
             android:layout_centerInParent="true"
-            android:textSize="@dimen/text_size_19"
+            android:textSize="@dimen/text_size_16"
             android:text="性别"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -37,10 +37,10 @@
                 android:src="@drawable/choice_sex_un_femal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:id="@+id/tv_choice_femal"
                 android:layout_marginTop="5dp"
-                android:textSize="@dimen/text_size_10"
+                android:textSize="@dimen/text_size_7"
                 android:textColor="@color/home_page_text_color"
                 android:text="♡ 只看女"
                 android:layout_width="wrap_content"
@@ -58,10 +58,10 @@
                 android:src="@drawable/choice_sex_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:id="@+id/tv_choice_all"
                 android:layout_marginTop="5dp"
-                android:textSize="@dimen/text_size_10"
+                android:textSize="@dimen/text_size_7"
                 android:textColor="@color/global"
                 android:text="♡ 看全部"
                 android:layout_width="wrap_content"
@@ -79,10 +79,10 @@
                 android:src="@drawable/choice_sex_un_male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:id="@+id/tv_choice_male"
                 android:layout_marginTop="5dp"
-                android:textSize="@dimen/text_size_10"
+                android:textSize="@dimen/text_size_7"
                 android:textColor="@color/home_page_text_color"
                 android:text="♡ 只看男"
                 android:layout_width="wrap_content"
@@ -99,11 +99,11 @@
             android:src="@drawable/choice_area_left"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:layout_marginBottom="3dp"
             android:textColor="@color/home_page_text_color"
             android:text="地区"
-            android:textSize="@dimen/text_size_13"
+            android:textSize="@dimen/text_size_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -117,7 +117,7 @@
         android:layout_width="match_parent"
         android:layout_height="270dp">
     </ListView>
-    <com.ylive.phonelive.widget.BlackButton
+    <com.shenlive.phonelive.widget.BlackButton
         android:layout_marginTop="20dp"
         android:id="@+id/btn_area_complete"
         android:textColor="@color/home_page_text_color"

@@ -4,96 +4,96 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <android.support.v4.widget.SwipeRefreshLayout
+           android:id="@+id/sl_newest"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:paddingBottom="50dp">
 
-        <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/sl_newest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="50dp">
+           <com.shenlive.phonelive.widget.HeaderGridView
+               android:paddingTop="10dp"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp"
+               android:id="@+id/gv_newest"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:horizontalSpacing="4dp"
+               android:numColumns="2"
+               android:verticalSpacing="4dp">
+           </com.shenlive.phonelive.widget.HeaderGridView>
 
-            <com.ylive.phonelive.widget.HeaderGridView
-                android:id="@+id/gv_newest"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:horizontalSpacing="5dp"
-                android:numColumns="2"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingTop="5dp"
-                android:verticalSpacing="4dp"></com.ylive.phonelive.widget.HeaderGridView>
+       </android.support.v4.widget.SwipeRefreshLayout>
 
-        </android.support.v4.widget.SwipeRefreshLayout>
+       <LinearLayout
+           android:visibility="gone"
+           android:id="@+id/newest_fensi"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/newest_fensi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical"
-            android:visibility="gone">
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:src="@drawable/buzai" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/buzai" />
+           <com.shenlive.phonelive.widget.BlackTextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="20dp"
+               android:singleLine="true"
+               android:text="@string/not_have_live"
+               android:textColor="@color/black"
+               android:textSize="@dimen/text_size_17" />
 
-            <com.ylive.phonelive.widget.BlackTextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:singleLine="true"
-                android:text="@string/not_have_live"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_20" />
+           <com.shenlive.phonelive.widget.BlackTextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="10dp"
+               android:singleLine="true"
+               android:text="@string/open_your_live"
+               android:textColor="@color/gray" />
+       </LinearLayout>
 
-            <com.ylive.phonelive.widget.BlackTextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:singleLine="true"
-                android:text="@string/open_your_live"
-                android:textColor="@color/gray" />
-        </LinearLayout>
+       <LinearLayout
+           android:visibility="gone"
+           android:id="@+id/newest_load"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/newest_load"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical"
-            android:visibility="gone">
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:src="@drawable/shibai" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/shibai" />
+           <com.shenlive.phonelive.widget.BlackTextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="20dp"
+               android:singleLine="true"
+               android:text="@string/loading_error"
+               android:textColor="@color/black"
+               android:textSize="@dimen/text_size_17" />
 
-            <com.ylive.phonelive.widget.BlackTextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:singleLine="true"
-                android:text="@string/loading_error"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_20" />
-
-            <com.ylive.phonelive.widget.BlackTextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:singleLine="true"
-                android:text="@string/open_your_live"
-                android:textColor="@color/gray"
-                android:visibility="gone" />
-        </LinearLayout>
-    </RelativeLayout>
+           <com.shenlive.phonelive.widget.BlackTextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginTop="10dp"
+               android:singleLine="true"
+               android:text="@string/open_your_live"
+               android:textColor="@color/gray"
+               android:visibility="gone" />
+       </LinearLayout>
+   </RelativeLayout>
 </LinearLayout>

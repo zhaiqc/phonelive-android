@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.ylive.phonelive.ui.customviews.ActivityTitle
+    <com.shenlive.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/view_title"
         android:background="@color/white"
         app:titleColor="@color/black"
@@ -22,14 +22,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:text="+86"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"/>
-            <com.ylive.phonelive.widget.BlackEditText
+            <com.shenlive.phonelive.widget.BlackEditText
                 android:inputType="number"
                 android:id="@+id/et_loginphone"
                 android:textColorHint="#E2E2E5"
@@ -54,14 +54,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:text="@string/vaildate_code"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"/>
-            <com.ylive.phonelive.widget.BlackEditText
+            <com.shenlive.phonelive.widget.BlackEditText
                 android:id="@+id/et_logincode"
                 android:textColorHint="#E2E2E5"
                 android:background="@null"
@@ -81,15 +81,15 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:text="@string/pass"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"/>
 
-            <com.ylive.phonelive.widget.BlackEditText
+            <com.shenlive.phonelive.widget.BlackEditText
                 android:id="@+id/et_password"
                 android:textColorHint="#E2E2E5"
                 android:background="@null"
@@ -109,14 +109,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <com.ylive.phonelive.widget.BlackTextView
+            <com.shenlive.phonelive.widget.BlackTextView
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:text="@string/confirm_pass"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2.5"/>
-            <com.ylive.phonelive.widget.BlackEditText
+            <com.shenlive.phonelive.widget.BlackEditText
                 android:id="@+id/et_secondPassword"
                 android:textColorHint="#E2E2E5"
                 android:background="@null"
@@ -134,7 +134,7 @@
             style="@style/h_line"/>
     </LinearLayout>
 
-    <com.ylive.phonelive.widget.BlackButton
+    <com.shenlive.phonelive.widget.BlackButton
         style="?android:attr/borderlessButtonStyle"
         android:id="@+id/btn_doResetPassword"
         android:textColor="@color/white"

@@ -5,7 +5,7 @@
    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <com.ylive.phonelive.ui.customviews.ActivityTitle
+    <com.shenlive.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/view_title"
         android:background="@color/graywhite"
         app:titleColor="@color/black"
@@ -19,7 +19,7 @@
         android:src="@drawable/choice_sex_male"
         android:layout_width="80dp"
         android:layout_height="80dp" />
-    <com.ylive.phonelive.widget.BlackTextView
+    <com.shenlive.phonelive.widget.BlackTextView
         android:layout_gravity="center"
         android:text="@string/man"
         android:layout_width="wrap_content"
@@ -31,7 +31,7 @@
         android:src="@drawable/choice_sex_femal"
         android:layout_width="80dp"
         android:layout_height="80dp" />
-    <com.ylive.phonelive.widget.BlackTextView
+    <com.shenlive.phonelive.widget.BlackTextView
         android:layout_gravity="center"
         android:text="@string/weman"
         android:layout_width="wrap_content"

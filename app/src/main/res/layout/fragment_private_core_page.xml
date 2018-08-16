@@ -20,7 +20,7 @@
             android:layout_width="29dp"
             android:layout_height="29dp" />
 
-        <com.ylive.phonelive.widget.PagerSlidingTabStrip
+        <com.shenlive.phonelive.widget.PagerSlidingTabStrip
             android:layout_centerInParent="true"
             android:id="@+id/tabs"
             android:layout_width="wrap_content"

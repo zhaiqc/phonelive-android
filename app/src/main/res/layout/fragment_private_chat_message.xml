@@ -18,7 +18,7 @@
             android:padding="5dp"
             android:layout_width="27dp"
             android:layout_height="27dp" />
-       <com.ylive.phonelive.widget.BlackTextView
+       <com.shenlive.phonelive.widget.BlackTextView
            android:id="@+id/tv_private_chat_title"
            android:layout_centerInParent="true"
            android:layout_width="wrap_content"

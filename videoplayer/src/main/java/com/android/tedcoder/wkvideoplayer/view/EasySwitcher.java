@@ -162,7 +162,7 @@ public class EasySwitcher extends LinearLayout{
         textView.setSelected(position == mDefaultSelection);
         textView.setGravity(Gravity.CENTER);
         textView.setText(mAllItemArray.get(position));
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12.0f);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 11.0f);
         textView.setOnClickListener(mItemOnClickListener);
         textView.setTag(position);
         return textView;

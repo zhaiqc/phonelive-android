@@ -33,6 +33,7 @@
                     android:layout_height="35dp"
                     android:background="@drawable/duanmai"/>
                 <ImageView
+                    android:visibility="gone"
                     android:layout_marginTop="@dimen/space_3"
                     android:id="@+id/iv_live_rtc"
                     android:layout_marginLeft="5dp"
@@ -99,7 +100,7 @@
 
 
     </RelativeLayout>
-        <com.ylive.phonelive.game.LucklyPanLayout
+        <com.shenlive.phonelive.game.LucklyPanLayout
             android:layout_below="@id/ll_bottom_menu"
             android:id="@+id/pl_panpokers"
             android:layout_width="wrap_content"
@@ -107,7 +108,7 @@
             android:layout_centerHorizontal="true"
             android:visibility="gone">
 
-        </com.ylive.phonelive.game.LucklyPanLayout>
+        </com.shenlive.phonelive.game.LucklyPanLayout>
     <LinearLayout
         android:visibility="gone"
         android:background="@color/white"
@@ -117,7 +118,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <com.ylive.phonelive.widget.BlackButton
+        <com.shenlive.phonelive.widget.BlackButton
             android:layout_width="60dp"
             android:layout_height="30dp"
             android:layout_marginLeft="7dp"
@@ -125,7 +126,7 @@
             android:background="@drawable/tglbtn_live_danmu_setting"
             />
 
-        <com.ylive.phonelive.widget.BlackEditText
+        <com.shenlive.phonelive.widget.BlackEditText
             android:maxLength="50"
             android:textSize="@dimen/text_size_12"
             android:padding="4dp"
@@ -137,7 +138,7 @@
             android:layout_weight="12"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
-        <com.ylive.phonelive.widget.BlackButton
+        <com.shenlive.phonelive.widget.BlackButton
             android:background="@color/global"
             android:id="@+id/bt_send_chat"
             android:textColor="@color/white"

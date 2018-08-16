@@ -83,7 +83,7 @@ public class EditPagePort extends EditPage  {
 	private void initTitle(RelativeLayout rlTitle, float ratio) {
 		tvCancel = new TextView(activity);
 		tvCancel.setTextColor(0xff3b3b3b);
-		tvCancel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+		tvCancel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
 		tvCancel.setGravity(Gravity.CENTER);
 		int resId = R.getStringRes(activity, "ssdk_oks_cancel");
 		if (resId > 0) {
@@ -97,7 +97,7 @@ public class EditPagePort extends EditPage  {
 
 		TextView tvTitle = new TextView(activity);
 		tvTitle.setTextColor(0xff3b3b3b);
-		tvTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 22);
+		tvTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
 		tvTitle.setGravity(Gravity.CENTER);
 		resId = R.getStringRes(activity, "ssdk_oks_multi_share");
 		if (resId > 0) {

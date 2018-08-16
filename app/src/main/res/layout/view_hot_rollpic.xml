@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F4F4F4">
-    <com.ylive.phonelive.widget.SlideshowView
+    <com.shenlive.phonelive.widget.SlideshowView
         android:id="@+id/slideshowView"
         android:layout_width="match_parent"
         android:layout_height="120dp"

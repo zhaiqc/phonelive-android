@@ -42,7 +42,7 @@
                         android:layout_centerVertical="true"
                         android:text="@string/report"
                         android:textColor="@color/global"
-                        android:textSize="@dimen/text_size_15"
+                        android:textSize="@dimen/text_size_12"
                         android:visibility="gone" />
 
                     <ImageButton
@@ -73,7 +73,7 @@
                         android:maxEms="8"
                         android:singleLine="true"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/text_size_17" />
+                        android:textSize="@dimen/text_size_16" />
                     <!--性别-->
                     <ImageView
                         android:id="@+id/iv_show_dialog_sex"
@@ -120,7 +120,7 @@
                         android:layout_marginLeft="5dp"
                         android:gravity="center"
                         android:textColor="@color/colorGray3"
-                        android:textSize="@dimen/text_size_12" />
+                        android:textSize="@dimen/text_size_9" />
                 </LinearLayout>
                 <!--签名-->
 
@@ -159,7 +159,7 @@
                     android:layout_alignParentRight="true"
                     android:text="粉丝:0"
                     android:textColor="@color/text_gray3"
-                    android:textSize="@dimen/text_size_14" />
+                    android:textSize="@dimen/text_size_11" />
 
                 <View
                     style="@style/v_line"
@@ -175,7 +175,7 @@
                     android:layout_alignParentTop="true"
                     android:text="关注:0"
                     android:textColor="@color/text_gray3"
-                    android:textSize="@dimen/text_size_14" />
+                    android:textSize="@dimen/text_size_11" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -189,7 +189,7 @@
                     android:layout_height="wrap_content"
                     android:text="送出:0"
                     android:textColor="#ff9116"
-                    android:textSize="@dimen/text_size_14" />
+                    android:textSize="@dimen/text_size_11" />
 
                 <View
                     style="@style/v_line"
@@ -203,7 +203,7 @@
                     android:layout_alignParentRight="true"
                     android:text="收入:0"
                     android:textColor="#ff9116"
-                    android:textSize="@dimen/text_size_14" />
+                    android:textSize="@dimen/text_size_11" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -237,7 +237,7 @@
                 android:gravity="center"
                 android:text="@string/attention"
                 android:textColor="@color/global"
-                android:textSize="@dimen/text_size_15" />
+                android:textSize="@dimen/text_size_11" />
 
 
             <TextView
@@ -248,7 +248,7 @@
                 android:gravity="center"
                 android:text="@string/private_chat"
                 android:textColor="@color/global"
-                android:textSize="@dimen/text_size_15" />
+                android:textSize="@dimen/text_size_11" />
 
             <TextView
                 android:id="@+id/tv_show_dialog_u_home_btn"
@@ -258,7 +258,7 @@
                 android:gravity="center"
                 android:text="@string/main_page"
                 android:textColor="@color/global"
-                android:textSize="@dimen/text_size_15" />
+                android:textSize="@dimen/text_size_11" />
         </LinearLayout>
 
         <!--底部菜单-->
@@ -281,7 +281,7 @@
                 android:gravity="center"
                 android:text="@string/main_page"
                 android:textColor="@color/global"
-                android:textSize="@dimen/text_size_15" />
+                android:textSize="@dimen/text_size_11" />
         </LinearLayout>
         <!--头像-->
         <RelativeLayout
@@ -290,7 +290,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="55dp">
 
-            <com.ylive.phonelive.widget.AvatarView
+            <com.shenlive.phonelive.widget.AvatarView
                 app:border_color="@color/global"
                 app:border_width="1dp"
                 android:id="@+id/av_show_dialog_u_head"

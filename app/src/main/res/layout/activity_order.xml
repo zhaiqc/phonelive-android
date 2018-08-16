@@ -14,7 +14,7 @@
             android:src="@drawable/me_ranking_yingpiao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_order_total"
             android:textColor="@color/black"
             android:text="0魅力值"

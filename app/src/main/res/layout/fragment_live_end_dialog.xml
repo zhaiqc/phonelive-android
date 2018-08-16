@@ -9,7 +9,7 @@
         android:layout_height="match_parent">
         <TextView
             android:textColor="@color/global"
-            android:textSize="@dimen/text_size_25"
+            android:textSize="@dimen/text_size_22"
             android:layout_marginTop="100dp"
             android:layout_centerHorizontal="true"
             android:text="@string/liveend"
@@ -22,10 +22,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginBottom="50dp">
-            <com.ylive.phonelive.widget.BlackButton
+            <com.shenlive.phonelive.widget.BlackButton
                 android:id="@+id/btn_follow"
                 style="@style/live_show_end_btn"/>
-            <com.ylive.phonelive.widget.BlackButton
+            <com.shenlive.phonelive.widget.BlackButton
                 android:id="@+id/btn_back_index"
                 style="@style/live_show_end_btn"
                 android:text="@string/gobackindex"

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.ylive.phonelive.ui.customviews.ActivityTitle
+    <com.shenlive.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/view_title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -21,16 +21,16 @@
         android:orientation="horizontal"
         android:padding="@dimen/space_16">
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_avatar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/space_4"
             android:text="@string/head"
-            android:textSize="@dimen/text_size_16" />
+            android:textSize="@dimen/text_size_15" />
 
-        <com.ylive.phonelive.widget.AvatarView
+        <com.shenlive.phonelive.widget.AvatarView
             android:id="@+id/av_userHead"
             android:layout_width="45dp"
             android:layout_height="45dp"
@@ -57,15 +57,15 @@
         android:orientation="horizontal"
         android:padding="@dimen/space_16">
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_qiaming"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/space_4"
             android:text="@string/nick_name"
-            android:textSize="@dimen/text_size_16" />
+            android:textSize="@dimen/text_size_15" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_userNick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
             android:layout_marginRight="20dp"
             android:ellipsize="end"
             android:singleLine="true"
-            android:textSize="@dimen/text_size_16" />
+            android:textSize="@dimen/text_size_15" />
 
         <ImageView
             android:id="@+id/iv_nick2"
@@ -94,15 +94,15 @@
         android:orientation="horizontal"
         android:padding="@dimen/space_16">
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@id/tv_qiaming"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/space_4"
             android:text="签名"
-            android:textSize="@dimen/text_size_16" />
+            android:textSize="@dimen/text_size_15" />
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_userSign"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
         android:orientation="horizontal"
         android:padding="@dimen/space_16">
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@+id/tv_birthday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -164,7 +164,7 @@
         android:orientation="horizontal"
         android:padding="@dimen/space_16">
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:id="@id/tv_qiaming"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -181,6 +181,45 @@
             android:src="@drawable/global_female" />
 
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/me_go"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View style="@style/h_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_classify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_16">
+
+        <com.shenlive.phonelive.widget.BlackTextView
+            android:id="@+id/tv_classifytitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_4"
+            android:text="直播分类"
+            android:textSize="@dimen/text_size_16" />
+
+        <com.shenlive.phonelive.widget.BlackTextView
+            android:id="@+id/tv_classify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:ellipsize="end"
+            android:maxEms="7"
+            android:singleLine="true"
+            android:text="选择分类"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageView
+            android:id="@+id/iv_classify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.ylive.phonelive.ui.customviews.ActivityTitle
+    <com.shenlive.phonelive.ui.customviews.ActivityTitle
         android:id="@+id/view_title"
         android:background="@color/graywhite"
         app:titleColor="@color/black"
@@ -13,7 +13,7 @@
         android:layout_height="50dp"/>
 
 
-    <com.ylive.phonelive.ui.customviews.LineControllerView
+    <com.shenlive.phonelive.ui.customviews.LineControllerView
         android:id="@+id/rl_change_pass"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -23,15 +23,31 @@
         app:canNav="true"/>
 
     <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/ll_rivacy"
+        style="@style/option_item_rl" >
+
+        <com.shenlive.phonelive.widget.BlackTextView
+            style="@style/option_item_text"
+            android:text="@string/Privacy" />
+        <Switch
+            android:id="@+id/switch_btn"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/me_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:visibility="gone"
         android:background="@color/white"
         android:id="@+id/ll_push_manage"
         style="@style/option_item_rl" >
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             style="@style/option_item_text"
             android:text="@string/pushmanage" />
-        <ImageView
+        <Switch
             android:layout_alignParentRight="true"
             android:src="@drawable/me_next"
             android:layout_width="wrap_content"
@@ -45,7 +61,7 @@
         android:id="@+id/ll_about"
         style="@style/option_item_rl" >
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             style="@style/option_item_text"
             android:text="@string/about" />
         <ImageView
@@ -61,7 +77,7 @@
         android:id="@+id/ll_feedback"
         style="@style/option_item_rl" >
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             style="@style/option_item_text"
             android:text="@string/feedback" />
         <ImageView
@@ -78,7 +94,7 @@
         android:id="@+id/ll_clearCache"
         style="@style/option_item_rl" >
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             style="@style/option_item_text"
             android:text="@string/clear_cache" />
 
@@ -91,7 +107,7 @@
         android:id="@+id/ll_blank_list"
         style="@style/option_item_rl" >
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             style="@style/option_item_text"
             android:text="@string/blanklist" />
         <ImageView
@@ -108,7 +124,7 @@
         android:id="@+id/ll_room_setting"
         style="@style/option_item_rl" >
 
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             style="@style/option_item_text"
             android:text="直播设置" />
         <ImageView
@@ -119,7 +135,7 @@
     </RelativeLayout>
 
 
-    <com.ylive.phonelive.ui.customviews.LineControllerView
+    <com.shenlive.phonelive.ui.customviews.LineControllerView
         android:id="@+id/ll_check_update"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -133,7 +149,7 @@
         android:background="@color/white"
         android:id="@+id/ll_login_out"
         style="@style/option_item_rl" >
-        <com.ylive.phonelive.widget.BlackTextView
+        <com.shenlive.phonelive.widget.BlackTextView
             android:text="@string/loginout"
             android:textColor="@android:color/holo_red_light"
             style="@style/option_item_text"
